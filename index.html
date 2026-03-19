@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DockMap</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>DockMap</h1>
+      <p>Find the correct service entrance for your delivery.</p>
+    </header>
+
+    <section class="search-box">
+  <div class="search-wrapper">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Enter building address (example: 200 Chambers St)"
+      autocomplete="off"
+    />
+    <div id="suggestions" class="suggestions"></div>
+  </div>
+
+</section>
+
+    <section id="result" class="result hidden"></section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

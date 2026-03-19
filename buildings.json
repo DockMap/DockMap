@@ -1,0 +1,136 @@
+[
+  {
+    "id": 1,
+    "building_name": "400 E 56th St, New York, NY 10022",
+    "main_address": "400 E 56th St, New York, NY 10022",
+    "service_entrance": "411 E 55th St, New York, NY 10022",
+    "avg_delivery_time": "4 to 5 min",
+    "delivery_access": "Every day, every time",
+    "images": [
+      "images/400_e_56th_st.jpeg"
+    ]
+  },
+  {
+    "id": 2,
+    "building_name": "200 Chambers St, New York, NY 10007",
+    "main_address": "200 Chambers St, New York, NY 10007",
+    "service_entrance": "140 Warren St, New York, NY 10007",
+    "avg_delivery_time": "4 to 5 min",
+    "delivery_access": "Mon-Fri 9am-5pm, other times use front entrance",
+    "images": [
+      "images/200_chamber_st.jpeg"
+    ]
+  },
+  {
+    "id": 3,
+    "building_name": "11 E 26th St, New York, NY 10010",
+    "main_address": "11 E 26th St, New York, NY 10010",
+    "service_entrance": "6-8 E 27th St, New York, NY 10010",
+    "avg_delivery_time": "2 to 3 min",
+    "delivery_access": "Mon-Fri 8am-5pm, other times use front entrance",
+    "images": [
+      "images/11_e_26th_st.jpeg"
+    ]
+  },
+  {
+    "id": 4,
+    "building_name": "860 United Nations Plaza, New York, NY 10017",
+    "main_address": "860 United Nations Plaza, New York, NY 10017",
+    "service_entrance": "438 E 48th St, New York, NY 10017",
+    "avg_delivery_time": "1 min (Doorman will take it)",
+    "delivery_access": "Mon-Fri 8am-4pm, other days and times use front entrance",
+    "images": [
+      "images/866_860_870_united_plaza.jpeg"
+    ]
+  },
+  {
+    "id": 5,
+    "building_name": "220 Riverside Blvd, New York, NY 10069",
+    "main_address": "220 Riverside Blvd, New York, NY 10069",
+    "service_entrance": "409 W 70th St, New York, NY 10069",
+    "avg_delivery_time": "1 min (Doorman will take it)",
+    "delivery_access": "Every day, every time",
+    "images": [
+      ""
+    ]
+  },
+  {
+    "id": 6,
+    "building_name": "200 Riverside Blvd, New York, NY 10069",
+    "main_address": "200 Riverside Blvd, New York, NY 10069",
+    "service_entrance": "435 W 70th St, New York, NY 10069",
+    "avg_delivery_time": " 4-5 min ",
+    "delivery_access": "Every day, every time",
+    "images": [
+      ""
+    ]
+  },
+  {
+    "id": 7,
+    "building_name": "120 Riverside Blvd, New York, NY 10069",
+    "main_address": "120 Riverside Blvd, New York, NY 10069",
+    "service_entrance": "490 W 66th St, New York, NY 10069",
+    "avg_delivery_time": " 4-5 min ",
+    "delivery_access": "Every day, every time",
+    "images": [
+      "image/120_riverside_blvd.jpeg"
+    ]
+  },
+  {
+    "id": 8,
+    "building_name": "11 Riverside Drive, New York, NY 10023",
+    "main_address": "11 Riverside Drive, New York, NY 10023",
+    "service_entrance": "285 West End Ave, New York, NY 10023",
+    "avg_delivery_time": " 1 min (Doorman will take it) ",
+    "delivery_access": "Every day, every time",
+    "images": [
+      ""
+    ]
+  },
+  {
+    "id": 9,
+    "building_name": "111 Murray St, New York, NY 10007",
+    "main_address": "111 Murray St, New York, NY 10007",
+    "service_entrance": " 101 Murray St , New York, NY 10007 ( before the garage)",
+    "avg_delivery_time": " 3 min (Doorman will take the delivery once you come down via the elevator)",
+    "delivery_access":"Mon-Fri 8am-5pm, other days and times use front entrance",
+    "images": [
+      ""
+    ]
+  },
+  {
+    "id": 10,
+    "building_name": "200 Rector P, New York, NY 10280",
+    "main_address": "200 Rector Pl, New York, NY 10280",
+    "service_entrance": " 295 W Thames St, New York, NY 10280",
+    "avg_delivery_time": " 4-5 min (You have to go upstairs)",
+    "delivery_access":"Every day, every time",
+    "images": [
+      ""
+    ]
+  },
+  {
+    "id": 11,
+    "building_name": "30 West St, New York, NY 10004",
+    "main_address": "30 West St, New York, NY 10004",
+    "service_entrance": " 21 1st Place, New York, NY 10004",
+    "avg_delivery_time": " 4-5 min (You have to go upstairs)",
+    "delivery_access":"Every day, every time",
+   "images": [
+      ""
+    ]
+  },
+  {
+    "id": 12,
+    "building_name": "45 E End Ave, New York, NY 10028",
+    "main_address": "45 E End Ave, New York, NY 10028",
+    "service_entrance": " 601 E 81St Ave, New York, NY 10028",
+    "avg_delivery_time": " 1 min (Leave it with doorman)",
+    "delivery_access":"Every day, every time",
+   "images": [
+      "images/45_e_end_ave_im1.jpeg",
+      "images/45_e_end_ave_im2.jpeg"
+    ]
+  }
+
+]

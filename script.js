@@ -37,11 +37,19 @@ function buildWazeLink(address) {
 function displayResult(found) {
   resultDiv.classList.remove("hidden");
 
-  const imagesHtml = Array.isArray(found.images)
-  ? found.images
-      .map((imagePath) => `<img src="/DockMap/${imagePath}" alt="Service entrance photo">`)
-      .join("")
-  : "";
+ let imageList = [];
+
+  if (Array.isArray(found.images)) {
+  imageList = found.images;
+  } else if (typeof found.images === "string" && found.images.trim() !== "") {
+  imageList = [found.images];
+  }
+
+const basePath = window.location.hostname.includes("github.io") ? "/DockMap/" : "./";
+
+const imagesHtml = imageList
+  .map((imagePath) => `<img src="${basePath}${imagePath}" alt="Service entrance photo">`)
+  .join("");
 
   resultDiv.innerHTML = `
     <h2>${found.main_address}</h2>

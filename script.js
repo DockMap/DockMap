@@ -39,7 +39,7 @@ function displayResult(found) {
 
   const imagesHtml = Array.isArray(found.images)
     ? found.images
-        .map((imagePath) => `<img src="${imagePath}" alt="Service entrance photo">`)
+        .map((imagePath) => `<img src="/DockMap/${imagePath}" alt="Service entrance photo">`)
         .join("")
     : "";
 

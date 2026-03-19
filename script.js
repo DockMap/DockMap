@@ -38,10 +38,10 @@ function displayResult(found) {
   resultDiv.classList.remove("hidden");
 
   const imagesHtml = Array.isArray(found.images)
-    ? found.images
-        .map((imagePath) => `<img src="./${imagePath}" alt="Service entrance photo">`)
-        .join("")
-    : "";
+  ? found.images
+      .map((imagePath) => `<img src="/DockMap/${imagePath}" alt="Service entrance photo">`)
+      .join("")
+  : "";
 
   resultDiv.innerHTML = `
     <h2>${found.main_address}</h2>

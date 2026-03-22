@@ -7,7 +7,7 @@
     "avg_delivery_time": "4 to 5 min",
     "delivery_access": "Every day, every time",
     "images": [
-      "images/400_e_56th_st.jpeg"
+      "Images/400_e_56th_st.jpeg"
     ]
   },
   {
@@ -18,18 +18,18 @@
     "avg_delivery_time": "4 to 5 min",
     "delivery_access": "Mon-Fri 9am-5pm, other times use front entrance",
     "images": [
-      "images/200_chamber_st.jpeg"
+      "Images/200_chamber_st.jpeg"
     ]
   },
   {
     "id": 3,
-    "building_name": "11 E 26th St, New York, NY 10010",
-    "main_address": "11 E 26th St, New York, NY 10010",
+    "building_name": "1 E 26th St, New York, NY 10010",
+    "main_address": "1 E 26th St, New York, NY 10010",
     "service_entrance": "6-8 E 27th St, New York, NY 10010",
     "avg_delivery_time": "2 to 3 min",
     "delivery_access": "Mon-Fri 8am-5pm, other times use front entrance",
     "images": [
-      "images/11_e_26th_st.jpeg"
+      "Images/11_e_26th_st.jpeg"
     ]
   },
   {
@@ -40,7 +40,7 @@
     "avg_delivery_time": "1 min (Doorman will take it)",
     "delivery_access": "Mon-Fri 8am-4pm, other days and times use front entrance",
     "images": [
-      "images/866_860_870_united_plaza.jpeg"
+      "Images/866_860_870_united_plaza.jpeg"
     ]
   },
   {
@@ -73,7 +73,7 @@
     "avg_delivery_time": " 4-5 min ",
     "delivery_access": "Every day, every time",
     "images": [
-      "image/120_riverside_blvd.jpeg"
+      "Image/120_riverside_blvd.jpeg"
     ]
   },
   {
@@ -128,8 +128,8 @@
     "avg_delivery_time": " 1 min (Leave it with doorman)",
     "delivery_access":"Every day, every time",
    "images": [
-      "images/45_e_end_ave_im1.jpeg",
-      "images/45_e_end_ave_im2.jpeg"
+      "Images/45_e_end_ave_im1.jpeg",
+      "Images/45_e_end_ave_im2.jpeg"
     ]
   }
 

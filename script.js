@@ -37,30 +37,31 @@ function buildWazeLink(address) {
 function displayResult(found) {
   resultDiv.classList.remove("hidden");
 
- let imageList = [];
+  let imageList = [];
 
   if (Array.isArray(found.images)) {
-  imageList = found.images;
+    imageList = found.images;
   } else if (typeof found.images === "string" && found.images.trim() !== "") {
-  imageList = [found.images];
+    imageList = [found.images];
   }
 
-const basePath = window.location.hostname.includes("github.io") ? "/DockMap/" : "./";
+  const isGitHubPages = window.location.hostname.includes("github.io");
+  const basePath = isGitHubPages ? "/DockMap/" : "";
 
-const imagesHtml = imageList
-  .map((imagePath) => `<img src="${basePath}${imagePath}" alt="Service entrance photo">`)
-  .join("");
+  const imagesHtml = imageList
+    .map((imagePath) => `<img src="${basePath}${imagePath}" alt="Service entrance photo">`)
+    .join("");
 
   resultDiv.innerHTML = `
     <h2>${found.main_address}</h2>
 
-   <div class="info-row">
-    <span class="label">Service Entrance:</span> 
-    <span class="address-text">${found.service_entrance}</span>
-    <button class="copy-btn" onclick="copyAddress('${found.service_entrance}')">
-    Copy
-    </button>
-   </div>
+    <div class="info-row">
+      <span class="label">Service Entrance:</span> 
+      <span class="address-text">${found.service_entrance}</span>
+      <button class="copy-btn" onclick="copyAddress('${found.service_entrance}')">
+        Copy
+      </button>
+    </div>
 
     <div class="info-row">
       <span class="label">Average Delivery Time:</span> ${found.avg_delivery_time || "Not available"}
@@ -164,7 +165,9 @@ suggestionsDiv.addEventListener("click", function (event) {
   }
 });
 
-searchBtn.addEventListener("click", searchBuilding);
+if (searchBtn) {
+  searchBtn.addEventListener("click", searchBuilding);
+}
 
 searchInput.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {

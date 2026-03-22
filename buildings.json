@@ -124,12 +124,57 @@
     "id": 12,
     "building_name": "45 E End Ave, New York, NY 10028",
     "main_address": "45 E End Ave, New York, NY 10028",
-    "service_entrance": " 601 E 81St Ave, New York, NY 10028",
+    "service_entrance": " 601 E 81th St Ave, New York, NY 10028",
     "avg_delivery_time": " 1 min (Leave it with doorman)",
     "delivery_access":"Every day, every time",
    "images": [
       "Images/45_e_end_ave_im1.jpeg",
       "Images/45_e_end_ave_im2.jpeg"
+    ]
+  },
+  {
+    "id": 13,
+    "building_name": "15 Central Prak West, New York, NY 10023",
+    "main_address": "15 Central Prak West, New York, NY 10023",
+    "service_entrance": "4 West 62th St, New York, NY 10028",
+    "avg_delivery_time": " 1 min (Leave it with doorman)",
+    "delivery_access":"Mon-Fri 8:30am-5pm, other days and times use front entrance",
+   "images": [
+      "Images/15_central_park_W.jpeg"
+    ]
+  },
+  {
+    "id": 14,
+    "building_name": "140 Riverside BLVD, New York, NY 10069",
+    "main_address": "140 Riverside BLVD, New York, NY 10069",
+    "service_entrance": "433 W 66th St, New York, NY 10069",
+    "avg_delivery_time": " 5 min",
+    "delivery_access":"Mon-Sun 7am-1am, other times use front entrance",
+   "images": [
+      "Images/140_riverside_blvd.jpeg"
+    ]
+  },
+  {
+    "id": 15,
+    "building_name": "120 Riverside BLVD, New York, NY 10069",
+    "main_address": "120 Riverside BLVD, New York, NY 10069",
+    "service_entrance": "490 W 66th St, New York, NY 10069",
+    "avg_delivery_time": " 5 min",
+    "delivery_access":"Mon-Sun 7am-11pm, other times use front entrance",
+   "images": [
+      "Images/120_riverside_blvd.jpeg"
+    ]
+  },
+  {
+    "id": 16,
+    "building_name": "15 West 72th St, New York, NY 10023",
+    "main_address": "15 West 72th St, New York, NY 10023",
+    "service_entrance": "Service entrance is down a slope next to the garage.",
+    "avg_delivery_time": " 2 min(Package is taken by staff at the service entrance)",
+    "delivery_access":"Mon-Sun 7am-6pm, others days and times use front entrance",
+   "images": [
+      "Images/15_w_72_st_im1.jpeg",
+      "Images/15_w_72_st_im2.jpeg"
     ]
   }
 

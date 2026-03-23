@@ -134,7 +134,7 @@
   },
   {
     "id": 13,
-    "building_name": "15 Central Prak West, New York, NY 10023",
+    "building_name": "15 Central Park West, New York, NY 10023",
     "main_address": "15 Central Prak West, New York, NY 10023",
     "service_entrance": "4 West 62th St, New York, NY 10028",
     "avg_delivery_time": " 1 min (Leave it with doorman)",
@@ -176,6 +176,76 @@
       "Images/15_w_72_st_im1.jpeg",
       "Images/15_w_72_st_im2.jpeg"
     ]
+  },
+  {
+    "id": 17,
+    "building_name": "88 Pine St, New York, NY 10005",
+    "main_address": "88 Pine St, New York, NY 10005",
+    "service_entrance": "142 Front St",
+    "avg_delivery_time": " 5 min ",
+    "delivery_access":"Mon-Fri 7am-4:45pm",
+   "images": [
+      ""
+    ]
+  },
+  {
+    "id": 18,
+    "building_name": "1148 5th, New York, NY 10128",
+    "main_address": "1148 5th, New York, NY 10128",
+    "service_entrance": "Beside the main entrance(black door)",
+    "avg_delivery_time": " 2 min(Package is taken by staff at the service entrance)",
+    "delivery_access":"Mon-Sun 9am-5pm, others days and times use front entrance",
+   "images": [
+      ""
+    ]
+  },
+  {
+    "id": 19,
+    "building_name": "876 Park Ave, New York, NY 10075",
+    "main_address": "876 Park Ave, New York, NY 10075",
+    "service_entrance": "68 E 78th St",
+    "avg_delivery_time": " 4 min",
+    "delivery_access":"Everyday 7am-10pm, others days and times use front entrance",
+   "images": [
+      ""
+    ]
+  },
+   {
+    "id": 20,
+    "building_name": "340 E 64th St, New York, NY 10065",
+    "main_address": "340 E 64th St, New York, NY 10065",
+    "service_entrance": "Use the long hallway beside the main entrance, in front of the garage",
+    "avg_delivery_time": " 5 min(Elevator may take some time)",
+    "delivery_access":"Mon-Fri 9am-5pm, others days and times use front entrance",
+   "images": [
+      ""
+    ]
+  },
+  {
+    "id": 21,
+    "building_name": "2 5th St, New York, NY 10011",
+    "main_address": "2 5th St, New York, NY 10011",
+    "service_entrance": "2 W 8th St, New York, NY 10011",
+    "avg_delivery_time": " 1 min(Package is taken by staff at the service entrance)",
+    "delivery_access":"Open 24/7",
+   "images": [
+      ""
+    ]
+  },
+  {
+    "id": 22,
+    "building_name": "150 Charles St, New York, NY 10014",
+    "main_address": "150 Charles St, New York, NY 10014",
+    "service_entrance": "287 W 10th St, New York, NY 10014",
+    "avg_delivery_time": " 2 min(Package is taken by staff at the service entrance)",
+    "delivery_access":"Open 24/7",
+   "images": [
+      ""
+    ]
   }
+  
+  
+  
+  
 
 ]

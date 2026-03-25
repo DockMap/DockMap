@@ -55,13 +55,42 @@ function displayResult(found) {
   resultDiv.innerHTML = `
     <h2>${found.main_address}</h2>
 
-    <div class="info-row">
-      <span class="label">Service Entrance:</span> 
-      <span class="address-text">${found.service_entrance}</span>
-      <button class="copy-btn" onclick="copyAddress('${found.service_entrance}')">
-        Copy
-      </button>
-    </div>
+    <div class="service-entrance-box">
+  <p class="service-entrance-label">📍 SERVICE ENTRANCE</p>
+
+  <p class="service-entrance-address">
+    ${found.service_entrance}
+  </p>
+
+  ${found.instruction ? `
+  <div class="info-row">
+    <span class="label">➡️</span> ${found.instruction}
+  </div>
+  ` : ""}
+
+  ${found.estimated_time_saved ? `
+  <div class="time-saved">
+    ⏱ Save ~${found.estimated_time_saved} min
+  </div>
+  ` : ""}
+
+  <div class="service-entrance-actions">
+  <button class="copy-btn" onclick="copyAddress('${found.service_entrance}'); countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
+    📋 Copy address
+  </button>
+
+  <a href="${buildGoogleMapsLink(found.service_entrance)}"
+     target="_blank"
+     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
+    🗺 Google Maps
+  </a>
+
+  <a href="${buildWazeLink(found.service_entrance)}"
+     target="_blank"
+     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
+    🧭 Waze
+  </a>
+  </div>
 
     <div class="info-row">
       <span class="label">Average Delivery Time:</span> ${found.avg_delivery_time || "Not available"}
@@ -71,15 +100,11 @@ function displayResult(found) {
       <span class="label">Delivery Access:</span> ${found.delivery_access || "Not available"}
     </div>
 
-    <div class="info-row">
-      <span class="label">Notes:</span> ${found.notes || "No additional notes"}
-    </div>
-
-    <div class="links">
-      <a href="${buildGoogleMapsLink(found.service_entrance)}" target="_blank">Open Service Entrance in Google Maps</a>
-      <a href="${buildWazeLink(found.service_entrance)}" target="_blank">Open Service Entrance in Waze</a>
-      <a href="${buildGoogleMapsLink(found.main_address)}" target="_blank">Open Main Address in Google Maps</a>
-    </div>
+    ${found.notes ? `
+  <div class="info-row">
+    <span class="label">Notes:</span> ${found.notes}
+  </div>
+  ` : ""}
 
     <div class="images">
       ${imagesHtml}
@@ -192,3 +217,45 @@ function copyAddress(address) {
       alert("Failed to copy address");
     });
 }
+
+function getTodayKey() {
+  const today = new Date();
+  return today.toISOString().split("T")[0];
+}
+
+function countBuildingTimeForToday(buildingId, minutes) {
+  if (!minutes) return;
+
+  const todayKey = getTodayKey();
+  const storageKey = "countedBuildingsByDay";
+
+  const countedData = JSON.parse(localStorage.getItem(storageKey)) || {};
+
+  if (!countedData[todayKey]) {
+    countedData[todayKey] = [];
+  }
+
+  if (countedData[todayKey].includes(buildingId)) {
+    return;
+  }
+
+  let total = parseInt(localStorage.getItem("totalTimeSaved") || "0");
+  total += minutes;
+  localStorage.setItem("totalTimeSaved", total);
+
+  countedData[todayKey].push(buildingId);
+  localStorage.setItem(storageKey, JSON.stringify(countedData));
+
+  updateTotalDisplay();
+}
+
+function updateTotalDisplay() {
+  const total = localStorage.getItem("totalTimeSaved") || 0;
+  const el = document.getElementById("totalSaved");
+
+  if (el) {
+    el.innerText = `⏱ Total saved: ${total} min`;
+  }
+}
+
+updateTotalDisplay();

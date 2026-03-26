@@ -34,6 +34,7 @@ function buildWazeLink(address) {
   return `https://waze.com/ul?q=${encodeURIComponent(address)}`;
 }
 
+
 function displayResult(found) {
   resultDiv.classList.remove("hidden");
 
@@ -56,42 +57,42 @@ function displayResult(found) {
     <h2>${found.main_address}</h2>
 
     <div class="service-entrance-box">
-  <p class="service-entrance-label">📍 SERVICE ENTRANCE</p>
+      <p class="service-entrance-label">📍 SERVICE ENTRANCE</p>
 
-  <p class="service-entrance-address">
-    ${found.service_entrance}
-  </p>
+      <p class="service-entrance-address">
+        ${found.service_entrance}
+      </p>
 
-  ${found.instruction ? `
-  <div class="info-row">
-    <span class="label">➡️</span> ${found.instruction}
-  </div>
-  ` : ""}
+      ${found.instruction ? `
+        <div class="info-row">
+          <span class="label">➡️</span> ${found.instruction}
+        </div>
+      ` : ""}
 
-  ${found.estimated_time_saved ? `
-  <div class="time-saved">
-    ⏱ Save ~${found.estimated_time_saved} min
-  </div>
-  ` : ""}
+      ${found.estimated_time_saved ? `
+        <div class="time-saved">
+          ⏱ Save ~${found.estimated_time_saved} min
+        </div>
+      ` : ""}
 
-  <div class="service-entrance-actions">
-  <button class="copy-btn" onclick="copyAddress('${found.service_entrance}'); countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
-    📋 Copy address
-  </button>
+      <div class="service-entrance-actions">
+        <button class="copy-btn" onclick="copyAddress('${found.service_entrance}'); countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
+          📋 Copy address
+        </button>
 
-  <a href="${buildGoogleMapsLink(found.service_entrance)}"
-     target="_blank"
-     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
-    🗺 Google Maps
-  </a>
+        <a href="${buildGoogleMapsLink(found.service_entrance)}"
+           target="_blank"
+           onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
+          🗺 Google Maps
+        </a>
 
-  <a href="${buildWazeLink(found.service_entrance)}"
-     target="_blank"
-     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
-    🧭 Waze
-  </a>
-</div>
-</div>
+        <a href="${buildWazeLink(found.service_entrance)}"
+           target="_blank"
+           onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
+          🧭 Waze
+        </a>
+      </div>
+    </div>
 
     <div class="info-row">
       <span class="label">Average Delivery Time:</span> ${found.avg_delivery_time || "Not available"}
@@ -102,10 +103,10 @@ function displayResult(found) {
     </div>
 
     ${found.notes ? `
-  <div class="info-row">
-    <span class="label">Notes:</span> ${found.notes}
-  </div>
-  ` : ""}
+      <div class="info-row">
+        <span class="label">Notes:</span> ${found.notes}
+      </div>
+    ` : ""}
 
     <div class="images">
       ${imagesHtml}

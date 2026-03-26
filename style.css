@@ -251,3 +251,32 @@ body {
 .service-entrance-actions a:hover {
   opacity: 0.92;
 }
+
+
+
+
+
+.time-popup {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #22c55e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.time-popup.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.time-popup.hidden {
+  display: none;
+}

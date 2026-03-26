@@ -75,19 +75,19 @@ function displayResult(found) {
   ` : ""}
 
   <div class="service-entrance-actions">
-  <button class="copy-btn" onclick="copyAddress('${found.service_entrance}'); countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
+  <button class="copy-btn" onclick="copyAddress('${found.service_entrance}'); countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0}); showTimePopup(${found.estimated_time_saved || 0})"
     📋 Copy address
   </button>
 
   <a href="${buildGoogleMapsLink(found.service_entrance)}"
      target="_blank"
-     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
+     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0}); showTimePopup(${found.estimated_time_saved || 0})"
     🗺 Google Maps
   </a>
 
   <a href="${buildWazeLink(found.service_entrance)}"
      target="_blank"
-     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
+     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0}); showTimePopup(${found.estimated_time_saved || 0})"
     🧭 Waze
   </a>
   </div>
@@ -249,6 +249,24 @@ function countBuildingTimeForToday(buildingId, minutes) {
   updateTotalDisplay();
 }
 
+function showTimePopup(minutes) {
+  const popup = document.getElementById("timePopup");
+
+  popup.innerText = `+${minutes} min 💚`;
+  popup.classList.remove("hidden");
+
+  setTimeout(() => {
+    popup.classList.add("show");
+  }, 10);
+
+  setTimeout(() => {
+    popup.classList.remove("show");
+    setTimeout(() => {
+      popup.classList.add("hidden");
+    }, 300);
+  }, 2000);
+}
+
 function updateTotalDisplay() {
   const total = localStorage.getItem("totalTimeSaved") || 0;
   const el = document.getElementById("totalSaved");
@@ -259,3 +277,4 @@ function updateTotalDisplay() {
 }
 
 updateTotalDisplay();
+

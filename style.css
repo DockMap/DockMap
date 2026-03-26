@@ -251,3 +251,13 @@ body {
 .service-entrance-actions a:hover {
   opacity: 0.92;
 }
+
+
+#totalSaved {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  font-size: 11px;
+  color: #aaa;
+  opacity: 0.6;
+}

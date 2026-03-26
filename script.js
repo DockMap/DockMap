@@ -75,22 +75,23 @@ function displayResult(found) {
   ` : ""}
 
   <div class="service-entrance-actions">
-  <button class="copy-btn" onclick="copyAddress('${found.service_entrance}'); countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})"
+  <button class="copy-btn" onclick="copyAddress('${found.service_entrance}'); countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
     📋 Copy address
   </button>
 
   <a href="${buildGoogleMapsLink(found.service_entrance)}"
      target="_blank"
-     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})"
+     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
     🗺 Google Maps
   </a>
 
   <a href="${buildWazeLink(found.service_entrance)}"
      target="_blank"
-    onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})"
+     onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
     🧭 Waze
   </a>
-  </div>
+</div>
+</div>
 
     <div class="info-row">
       <span class="label">Average Delivery Time:</span> ${found.avg_delivery_time || "Not available"}

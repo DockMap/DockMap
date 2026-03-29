@@ -63,6 +63,12 @@ function displayResult(found) {
         ${found.service_entrance}
       </p>
 
+      ${found.id_required ? `
+        <div class="id-warning">
+           🪪 ID required
+        </div>
+      ` : ""}
+
       ${found.instruction ? `
         <div class="info-row">
           <span class="label">➡️</span> ${found.instruction}

@@ -106,7 +106,7 @@ function displayResult(found) {
    });
    ">
    🗺 Google Maps
- </a>
+   </a>
 
        <a class="action-btn"
    href="${buildWazeLink(found.service_entrance)}"
@@ -120,8 +120,8 @@ function displayResult(found) {
    });
    ">
    🧭 Waze
- </a>
-      </div>
+   </a>
+   </div>
     </div>
 
     <div class="info-row">

@@ -244,12 +244,19 @@ body {
 }
 
 .service-entrance-actions a {
+  display: inline-block;
+  padding: 12px 16px;
+  font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
   background: #111;
   color: white;
+  border: none;
 }
 
 .service-entrance-actions a:hover {
-  opacity: 0.92;
+  background: #000;
+  opacity: 1;
 }
 
 
@@ -273,20 +280,3 @@ body {
   font-weight: 500;
 }
 
-.action-btn {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 10px;
-  background-color: #000;   /* noir */
-  color: #fff;              /* texte blanc */
-  text-decoration: none;
-  font-size: 14px;
-  border: none;
-  margin-left: 6px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.action-btn:hover {
-  background-color: #222;   /* léger hover */
-}

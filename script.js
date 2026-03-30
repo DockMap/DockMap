@@ -65,7 +65,7 @@ function displayResult(found) {
 
       ${found.id_required ? `
         <div class="id-warning">
-           🪪 ID required
+          🪪 ID required
         </div>
       ` : ""}
 
@@ -81,47 +81,46 @@ function displayResult(found) {
         </div>
       ` : ""}
 
-      <button class="copy-btn" 
-         onclick="
-           copyAddress('${found.service_entrance}');
+      <div class="service-entrance-actions">
+        <button class="copy-btn" 
+          onclick="
+            copyAddress('${found.service_entrance}');
             countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
             trackDeliveryAssist('copy_service_entrance', {
-           id: '${found.id}',
-           building_name: '${found.building_name}',
-           estimated_time_saved: ${found.estimated_time_saved || 0}
-        });
-       ">
-       📋 Copy address
-       </button>
+              id: '${found.id}',
+              building_name: '${found.building_name}',
+              estimated_time_saved: ${found.estimated_time_saved || 0}
+            });
+          ">
+          📋 Copy address
+        </button>
 
-       <a class="action-btn"
-   href="${buildGoogleMapsLink(found.service_entrance)}"
-   target="_blank"
-   onclick="
-   countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
-   trackDeliveryAssist('click_google_maps', {
-   id: '${found.id}',
-   building_name: '${found.building_name}',
-   estimated_time_saved: ${found.estimated_time_saved || 0}
-   });
-   ">
-   🗺 Google Maps
-   </a>
+        <a href="${buildGoogleMapsLink(found.service_entrance)}"
+           target="_blank"
+           onclick="
+             countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
+             trackDeliveryAssist('click_google_maps', {
+               id: '${found.id}',
+               building_name: '${found.building_name}',
+               estimated_time_saved: ${found.estimated_time_saved || 0}
+             });
+           ">
+          🗺 Google Maps
+        </a>
 
-       <a class="action-btn"
-   href="${buildWazeLink(found.service_entrance)}"
-   target="_blank"
-   onclick="
-   countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
-   trackDeliveryAssist('click_waze', {
-   id: '${found.id}',
-   building_name: '${found.building_name}',
-   estimated_time_saved: ${found.estimated_time_saved || 0}
-   });
-   ">
-   🧭 Waze
-   </a>
-   </div>
+        <a href="${buildWazeLink(found.service_entrance)}"
+           target="_blank"
+           onclick="
+             countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
+             trackDeliveryAssist('click_waze', {
+               id: '${found.id}',
+               building_name: '${found.building_name}',
+               estimated_time_saved: ${found.estimated_time_saved || 0}
+             });
+           ">
+          🧭 Waze
+        </a>
+      </div>
     </div>
 
     <div class="info-row">

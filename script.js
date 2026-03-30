@@ -81,21 +81,43 @@ function displayResult(found) {
         </div>
       ` : ""}
 
-      <div class="service-entrance-actions">
-        <button class="copy-btn" onclick="copyAddress('${found.service_entrance}'); countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
-          📋 Copy address
-        </button>
+      <button class="copy-btn" 
+         onclick="
+           copyAddress('${found.service_entrance}');
+            countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
+            trackDeliveryAssist('copy_service_entrance', {
+           id: '${found.id}',
+           building_name: '${found.building_name}',
+           estimated_time_saved: ${found.estimated_time_saved || 0}
+        });
+       ">
+       📋 Copy address
+       </button>
 
         <a href="${buildGoogleMapsLink(found.service_entrance)}"
            target="_blank"
-           onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
-          🗺 Google Maps
+           onclick="
+           countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
+           trackDeliveryAssist('click_google_maps', {
+           id: '${found.id}',
+           building_name: '${found.building_name}',
+           estimated_time_saved: ${found.estimated_time_saved || 0}
+           });
+           ">
+           🗺 Google Maps
         </a>
 
         <a href="${buildWazeLink(found.service_entrance)}"
            target="_blank"
-           onclick="countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0})">
-          🧭 Waze
+           onclick="
+           trackDeliveryAssist('click_waze', {
+           id: '${found.id}',
+           building_name: '${found.building_name}',
+           estimated_time_saved: ${found.estimated_time_saved || 0}
+           });
+           countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
+           ">
+           🧭 Waze
         </a>
       </div>
     </div>
@@ -231,13 +253,29 @@ function getTodayKey() {
   return today.toISOString().split("T")[0];
 }
 
+
+function trackDeliveryAssist(actionType, building) {
+  if (typeof gtag !== "function") return;
+
+  gtag("event", actionType, {
+    building_id: building.id || "",
+    building_name: building.building_name || "",
+    main_address: building.main_address || "",
+    service_entrance: building.service_entrance || "",
+    estimated_time_saved: building.estimated_time_saved || 0
+  });
+}
+
+
 function countBuildingTimeForToday(buildingId, minutes) {
   if (!minutes) return;
 
   const todayKey = getTodayKey();
-  const storageKey = "countedBuildingsByDay";
+  const countedKey = "countedBuildingsByDay";
+  const timeKey = "timeSavedByDay";
 
-  const countedData = JSON.parse(localStorage.getItem(storageKey)) || {};
+  const countedData = JSON.parse(localStorage.getItem(countedKey)) || {};
+  const timeData = JSON.parse(localStorage.getItem(timeKey)) || {};
 
   if (!countedData[todayKey]) {
     countedData[todayKey] = [];
@@ -247,23 +285,33 @@ function countBuildingTimeForToday(buildingId, minutes) {
     return;
   }
 
-  let total = parseInt(localStorage.getItem("totalTimeSaved") || "0");
-  total += minutes;
-  localStorage.setItem("totalTimeSaved", total);
+  // 👉 initialiser le jour si nécessaire
+  if (!timeData[todayKey]) {
+    timeData[todayKey] = 0;
+  }
+
+  // 👉 ajouter les minutes pour AUJOURD’HUI seulement
+  timeData[todayKey] += minutes;
+
+  // 👉 sauvegarde
+  localStorage.setItem(timeKey, JSON.stringify(timeData));
 
   countedData[todayKey].push(buildingId);
-  localStorage.setItem(storageKey, JSON.stringify(countedData));
+  localStorage.setItem(countedKey, JSON.stringify(countedData));
 
   updateTotalDisplay();
 }
 
 
 function updateTotalDisplay() {
-  const total = localStorage.getItem("totalTimeSaved") || 0;
+  const todayKey = getTodayKey();
+  const timeData = JSON.parse(localStorage.getItem("timeSavedByDay")) || {};
+  const total = timeData[todayKey] || 0;
+
   const el = document.getElementById("totalSaved");
 
   if (el) {
-    el.innerText = `⏱ Total saved: ${total} min`;
+    el.innerText = `⏱ Today saved: ${total} min`;
   }
 }
 

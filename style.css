@@ -275,15 +275,18 @@ body {
 
 .action-btn {
   display: inline-block;
-  padding: 6px 10px;
-  border-radius: 6px;
-  background-color: #f1f1f1;
-  color: black;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background-color: #000;   /* noir */
+  color: #fff;              /* texte blanc */
   text-decoration: none;
   font-size: 14px;
-  margin-left: 5px;
+  border: none;
+  margin-left: 6px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .action-btn:hover {
-  background-color: #ddd;
+  background-color: #222;   /* léger hover */
 }

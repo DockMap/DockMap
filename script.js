@@ -106,20 +106,21 @@ function displayResult(found) {
    });
    ">
    🗺 Google Maps
-</a>
+ </a>
 
-        <a href="${buildWazeLink(found.service_entrance)}"
-           target="_blank"
-           onclick="
-           trackDeliveryAssist('click_waze', {
-           id: '${found.id}',
-           building_name: '${found.building_name}',
-           estimated_time_saved: ${found.estimated_time_saved || 0}
-           });
-           countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
-           ">
-           🧭 Waze
-        </a>
+       <a class="action-btn"
+   href="${buildWazeLink(found.service_entrance)}"
+   target="_blank"
+   onclick="
+   countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
+   trackDeliveryAssist('click_waze', {
+   id: '${found.id}',
+   building_name: '${found.building_name}',
+   estimated_time_saved: ${found.estimated_time_saved || 0}
+   });
+   ">
+   🧭 Waze
+ </a>
       </div>
     </div>
 

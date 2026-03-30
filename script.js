@@ -94,18 +94,19 @@ function displayResult(found) {
        📋 Copy address
        </button>
 
-        <a href="${buildGoogleMapsLink(found.service_entrance)}"
-           target="_blank"
-           onclick="
-           countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
-           trackDeliveryAssist('click_google_maps', {
-           id: '${found.id}',
-           building_name: '${found.building_name}',
-           estimated_time_saved: ${found.estimated_time_saved || 0}
-           });
-           ">
-           🗺 Google Maps
-        </a>
+       <a class="action-btn"
+   href="${buildGoogleMapsLink(found.service_entrance)}"
+   target="_blank"
+   onclick="
+   countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
+   trackDeliveryAssist('click_google_maps', {
+   id: '${found.id}',
+   building_name: '${found.building_name}',
+   estimated_time_saved: ${found.estimated_time_saved || 0}
+   });
+   ">
+   🗺 Google Maps
+</a>
 
         <a href="${buildWazeLink(found.service_entrance)}"
            target="_blank"

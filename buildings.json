@@ -115,7 +115,7 @@
     "main_address": "200 Rector Pl, New York, NY 10280",
     "service_entrance": " 295 W Thames St, New York, NY 10280",
     "avg_delivery_time": " 4-5 min (You have to go upstairs)",
-    "delivery_access":"Every day, every time",
+    "delivery_access":"Open 24/7",
     "estimated_time_saved": 2,
     "images": [
       ""
@@ -127,7 +127,7 @@
     "main_address": "30 West St, New York, NY 10004",
     "service_entrance": " 21 1st Place, New York, NY 10004",
     "avg_delivery_time": " 4-5 min (You have to go upstairs)",
-    "delivery_access":"Every day, every time",
+    "delivery_access":"Open 24/7",
     "estimated_time_saved": 1,
    "images": [
       ""
@@ -139,7 +139,8 @@
     "main_address": "45 E End Ave, New York, NY 10028",
     "service_entrance": " 601 E 81th St Ave, New York, NY 10028",
     "avg_delivery_time": " 1 min (Leave it with doorman)",
-    "delivery_access":"Every day, every time",
+    "delivery_access":" Open 24/7",
+    "estimated_time_saved": 1,
    "images": [
       "Images/45_e_end_ave_im1.jpeg",
       "Images/45_e_end_ave_im2.jpeg"

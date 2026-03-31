@@ -88,7 +88,7 @@ function displayResult(found) {
         <button class="copy-btn" 
           onclick="
             copyAddress('${found.service_entrance}');
-            countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
+            countBuildingTimeSaved(${found.id}, ${found.estimated_time_saved || 0});
             trackDeliveryAssist('copy_service_entrance', {
               id: '${found.id}',
               building_name: '${found.building_name}',
@@ -101,7 +101,7 @@ function displayResult(found) {
         <a href="${buildGoogleMapsLink(found.service_entrance)}"
            target="_blank"
            onclick="
-             countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
+             countBuildingTimeSaved(${found.id}, ${found.estimated_time_saved || 0});
              trackDeliveryAssist('click_google_maps', {
                id: '${found.id}',
                building_name: '${found.building_name}',
@@ -114,7 +114,7 @@ function displayResult(found) {
         <a href="${buildWazeLink(found.service_entrance)}"
            target="_blank"
            onclick="
-             countBuildingTimeForToday(${found.id}, ${found.estimated_time_saved || 0});
+             countBuildingTimeSaved(${found.id}, ${found.estimated_time_saved || 0});
              trackDeliveryAssist('click_waze', {
                id: '${found.id}',
                building_name: '${found.building_name}',
@@ -275,42 +275,6 @@ function trackDeliveryAssist(actionType, building) {
 }
 
 
-function countBuildingTimeForToday(buildingId, minutes) {
-  if (!minutes) return;
-
-  const todayKey = getTodayKey();
-  const countedKey = "countedBuildingsByDay";
-  const timeKey = "timeSavedByDay";
-
-  const countedData = JSON.parse(localStorage.getItem(countedKey)) || {};
-  const timeData = JSON.parse(localStorage.getItem(timeKey)) || {};
-
-  if (!countedData[todayKey]) {
-    countedData[todayKey] = [];
-  }
-
-  if (countedData[todayKey].includes(buildingId)) {
-    return;
-  }
-
-  // 👉 initialiser le jour si nécessaire
-  if (!timeData[todayKey]) {
-    timeData[todayKey] = 0;
-  }
-
-  // 👉 ajouter les minutes pour AUJOURD’HUI seulement
-  timeData[todayKey] += minutes;
-
-  // 👉 sauvegarde
-  localStorage.setItem(timeKey, JSON.stringify(timeData));
-
-  countedData[todayKey].push(buildingId);
-  localStorage.setItem(countedKey, JSON.stringify(countedData));
-
-  updateTotalDisplay();
-}
-
-
 function updateTotalDisplay() {
   const todayKey = getTodayKey();
   const timeData = JSON.parse(localStorage.getItem("timeSavedByDay")) || {};
@@ -352,6 +316,10 @@ function startEngagedViewTimer(building) {
   engagedViewTimer = setTimeout(() => {
     if (currentDisplayedBuilding && !engagedViewTracked) {
       trackEngagedView(currentDisplayedBuilding);
+      countBuildingTimeSaved(
+        currentDisplayedBuilding.id,
+        currentDisplayedBuilding.estimated_time_saved || 0
+      );
       engagedViewTracked = true;
     }
   }, 6000);
@@ -367,3 +335,81 @@ function resetEngagedViewTracking() {
   engagedViewTracked = false;
 }
 
+// pour metric 3
+
+function getTodayKey() {
+  const today = new Date();
+  return today.toISOString().split("T")[0];
+}
+
+function getWeekKey() {
+  const today = new Date();
+  const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
+  const pastDaysOfYear = Math.floor((today - firstDayOfYear) / 86400000);
+  const weekNumber = Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
+
+  return `${today.getFullYear()}-W${weekNumber}`;
+}
+
+function getMonthKey() {
+  const today = new Date();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  return `${today.getFullYear()}-${month}`;
+}
+
+function addTimeSaved(periodKey, storageKey, minutes) {
+  const data = JSON.parse(localStorage.getItem(storageKey)) || {};
+
+  if (!data[periodKey]) {
+    data[periodKey] = 0;
+  }
+
+  data[periodKey] += minutes;
+  localStorage.setItem(storageKey, JSON.stringify(data));
+}
+
+//function preincipale metric 3 
+function countBuildingTimeSaved(buildingId, minutes) {
+  if (!minutes) return;
+
+  const todayKey = getTodayKey();
+  const weekKey = getWeekKey();
+  const monthKey = getMonthKey();
+
+  const countedKey = "countedBuildingsByDay";
+  const countedData = JSON.parse(localStorage.getItem(countedKey)) || {};
+
+  if (!countedData[todayKey]) {
+    countedData[todayKey] = [];
+  }
+
+  if (countedData[todayKey].includes(buildingId)) {
+    return;
+  }
+
+  addTimeSaved(todayKey, "timeSavedByDay", minutes);
+  addTimeSaved(weekKey, "timeSavedByWeek", minutes);
+  addTimeSaved(monthKey, "timeSavedByMonth", minutes);
+
+  countedData[todayKey].push(buildingId);
+  localStorage.setItem(countedKey, JSON.stringify(countedData));
+}
+
+//function pour afficher les velurs  metric 3 
+function getTodayTimeSaved() {
+  const todayKey = getTodayKey();
+  const data = JSON.parse(localStorage.getItem("timeSavedByDay")) || {};
+  return data[todayKey] || 0;
+}
+
+function getWeekTimeSaved() {
+  const weekKey = getWeekKey();
+  const data = JSON.parse(localStorage.getItem("timeSavedByWeek")) || {};
+  return data[weekKey] || 0;
+}
+
+function getMonthTimeSaved() {
+  const monthKey = getMonthKey();
+  const data = JSON.parse(localStorage.getItem("timeSavedByMonth")) || {};
+  return data[monthKey] || 0;
+}

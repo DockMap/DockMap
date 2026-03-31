@@ -1,4 +1,7 @@
 let buildings = [];
+let engagedViewTimer = null;
+let currentDisplayedBuilding = null;
+let engagedViewTracked = false;
 
 fetch("buildings.json")
   .then((response) => response.json())
@@ -141,6 +144,9 @@ function displayResult(found) {
       ${imagesHtml}
     </div>
   `;
+    //pour la metrc 2
+    startEngagedViewTimer(found);
+
 }
 
 function searchBuilding() {
@@ -158,14 +164,15 @@ function searchBuilding() {
   }
 
   resultDiv.classList.remove("hidden");
-
+//pour metric 2
   if (!found) {
-    resultDiv.innerHTML = `
-      <p class="not-found">Address not found.</p>
-      <p>Try a suggested address from the dropdown.</p>
-    `;
-    return;
-  }
+  resultDiv.innerHTML = `
+    <p class="not-found">Address not found.</p>
+    <p>Try a suggested address from the dropdown.</p>
+  `;
+  resetEngagedViewTracking();
+  return;
+}
 
   displayResult(found);
 }
@@ -317,4 +324,46 @@ function updateTotalDisplay() {
 }
 
 updateTotalDisplay();
+
+//pour la metric 2
+
+function trackEngagedView(building) {
+  if (typeof gtag !== "function") return;
+
+  gtag("event", "engaged_view", {
+    building_id: building.id || "",
+    building_name: building.building_name || "",
+    main_address: building.main_address || "",
+    service_entrance: building.service_entrance || "",
+    estimated_time_saved: building.estimated_time_saved || 0,
+    id_required: building.id_required ? "yes" : "no",
+    delivery_access: building.delivery_access || ""
+  });
+}
+
+function startEngagedViewTimer(building) {
+  if (engagedViewTimer) {
+    clearTimeout(engagedViewTimer);
+  }
+
+  currentDisplayedBuilding = building;
+  engagedViewTracked = false;
+
+  engagedViewTimer = setTimeout(() => {
+    if (currentDisplayedBuilding && !engagedViewTracked) {
+      trackEngagedView(currentDisplayedBuilding);
+      engagedViewTracked = true;
+    }
+  }, 6000);
+}
+
+function resetEngagedViewTracking() {
+  if (engagedViewTimer) {
+    clearTimeout(engagedViewTimer);
+    engagedViewTimer = null;
+  }
+
+  currentDisplayedBuilding = null;
+  engagedViewTracked = false;
+}
 

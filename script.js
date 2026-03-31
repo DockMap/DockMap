@@ -369,6 +369,7 @@ function addTimeSaved(periodKey, storageKey, minutes) {
 }
 
 //function preincipale metric 3 
+
 function countBuildingTimeSaved(buildingId, minutes) {
   if (!minutes) return;
 
@@ -393,8 +394,15 @@ function countBuildingTimeSaved(buildingId, minutes) {
 
   countedData[todayKey].push(buildingId);
   localStorage.setItem(countedKey, JSON.stringify(countedData));
-}
 
+  // 🔥 ENVOI À GOOGLE ANALYTICS
+  if (typeof gtag === "function") {
+    gtag("event", "time_saved", {
+      value: minutes,
+      building_id: buildingId
+    });
+  }
+}
 //function pour afficher les velurs  metric 3 
 function getTodayTimeSaved() {
   const todayKey = getTodayKey();

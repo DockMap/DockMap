@@ -371,7 +371,8 @@ function addTimeSaved(periodKey, storageKey, minutes) {
 //function preincipale metric 3 
 
 function countBuildingTimeSaved(buildingId, minutes) {
-  if (!minutes) return;
+  const numericMinutes = Number(minutes);
+  if (!numericMinutes) return;
 
   const todayKey = getTodayKey();
   const weekKey = getWeekKey();
@@ -388,18 +389,17 @@ function countBuildingTimeSaved(buildingId, minutes) {
     return;
   }
 
-  addTimeSaved(todayKey, "timeSavedByDay", minutes);
-  addTimeSaved(weekKey, "timeSavedByWeek", minutes);
-  addTimeSaved(monthKey, "timeSavedByMonth", minutes);
+  addTimeSaved(todayKey, "timeSavedByDay", numericMinutes);
+  addTimeSaved(weekKey, "timeSavedByWeek", numericMinutes);
+  addTimeSaved(monthKey, "timeSavedByMonth", numericMinutes);
 
   countedData[todayKey].push(buildingId);
   localStorage.setItem(countedKey, JSON.stringify(countedData));
 
-  // 🔥 ENVOI À GOOGLE ANALYTICS
   if (typeof gtag === "function") {
     gtag("event", "time_saved", {
-      value: minutes,
-      building_id: buildingId
+      value: numericMinutes,
+      building_id: String(buildingId)
     });
   }
 }

@@ -372,6 +372,9 @@ function addTimeSaved(periodKey, storageKey, minutes) {
 
 function countBuildingTimeSaved(buildingId, minutes) {
   const numericMinutes = Number(minutes);
+
+  console.log("TIME SAVED DEBUG:", buildingId, minutes, Number(minutes));
+  
   if (!numericMinutes) return;
 
   const todayKey = getTodayKey();

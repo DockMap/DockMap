@@ -398,7 +398,7 @@ function countBuildingTimeSaved(buildingId, minutes) {
 
   if (typeof gtag === "function") {
     gtag("event", "time_saved", {
-      value: numericMinutes,
+      time_saved_minutes: numericMinutes,
       building_id: String(buildingId)
     });
   }

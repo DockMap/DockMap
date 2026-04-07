@@ -424,7 +424,57 @@
     "images": [
       "Images/240_e_39th_st.jpeg"
     ]
+  },
+  {
+    "id": 35,
+    "building_name": "265 E 66th St, New York, NY 10065",
+    "main_address": "265 E 66th St, New York, NY 10065",
+    "service_entrance": "256 E 67th St, New York, NY 10065",
+    "avg_delivery_time": "1-2 min",
+    "delivery_access":" Mon-Fri: 7am - 8pm , Sat : 8am - 6pm, Sun : closed",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/265_e_66th_st.jpeg"
+    ]
+  },
+  {
+    "id": 36,
+    "building_name": "160 W 62nd St, New York, NY 10023",
+    "main_address": "160 W 62nd St, New York, NY 10023",
+    "service_entrance": "45 Amsterdam Ave, New York, NY 10023",
+    "avg_delivery_time": "4-5 min",
+    "delivery_access":" 24/7 ",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/160_w_62nd_st.jpeg"
+    ]
+  },
+  {
+    "id": 37,
+    "building_name": "500/510/520 E 77th St, New York, NY 10162",
+    "main_address": "500/510/520 E 77th St, New York, NY 10162",
+    "service_entrance": "506 E 76th St, New York, NY 10162",
+    "avg_delivery_time": "4-8 min",
+    "delivery_access":" 24/7 ",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/506_e_76th_st.jpeg"
+    ]
+  },
+{
+    "id": 38,
+    "building_name": "941 Park Avenue, New York, NY 10028",
+    "main_address": "941 Park Avenue, New York, NY 10028",
+    "service_entrance": "107 E 81th St, New York, NY 10028",
+    "avg_delivery_time": "1-2 min",
+    "delivery_access":" Everyday : 8am - 5pm ",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/941_park_ave_im1.jpeg",
+      "Images/941_park_ave_im2.jpeg"
+    ]
   }
+
 
 
   

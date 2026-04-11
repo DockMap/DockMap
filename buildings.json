@@ -149,7 +149,7 @@
   {
     "id": 13,
     "building_name": "15 Central Park West, New York, NY 10023",
-    "main_address": "15 Central Prak West, New York, NY 10023",
+    "main_address": "15 Central Park West, New York, NY 10023",
     "service_entrance": "4 West 62th St, New York, NY 10028",
     "avg_delivery_time": " 1 min (Leave it with doorman)",
     "delivery_access":"Mon-Fri 8:30am-5pm, other days and times use front entrance",
@@ -473,12 +473,106 @@
       "Images/941_park_ave_im1.jpeg",
       "Images/941_park_ave_im2.jpeg"
     ]
+  },
+  {
+    "id": 39,
+    "building_name": "780 Third Avenue, New York, NY 10017",
+    "main_address": "780 Third Avenue, New York, NY 10017",
+    "service_entrance": "153 E 48th St, New York, NY 10017",
+    "avg_delivery_time": "4-5 min",
+    "delivery_access":" Everyday : 7am - 4:30pm ",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/780_3rd_ave.jpeg"
+    ]
+  },
+  {
+    "id": 40,
+    "building_name": "301 - 303 E 57th St, New York, NY 10022",
+    "main_address": "301 - 303 E 57th St, New York, NY 10022",
+    "service_entrance": "300 E 58th St, New York, NY 10022",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Fri : 7am - 8pm || Sat : 8am - 6pm || Sun : closed",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/303_e_57th_st.jpeg"
+    ]
+  },
+  {
+    "id": 41,
+    "building_name": "300 E 56th St, New York, NY 10022",
+    "main_address": "303 E 56th St, New York, NY 10022",
+    "service_entrance": "305 E 55th St, New York, NY 10022",
+    "avg_delivery_time": "4-5 min",
+    "delivery_access":" Mon-Sun : 6am - 11pm",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/300_e_56th_st.jpeg"
+    ]
+  },
+  {
+    "id": 42,
+    "building_name": "425 E 58th St, New York, NY 10022",
+    "main_address": "425 E 58th St, New York, NY 10022",
+    "service_entrance": "438 E 59th St, New York, NY 10022",
+    "avg_delivery_time": "4-5 min",
+    "delivery_access":" Mon-Fri : 8:30am - 6pm",
+    "estimated_time_saved": 2,
+    "id_required": true,
+    "images": [
+      "Images/425_e_58th_st_im1.jpeg",
+      "Images/425_e_58th_st_im2.jpeg"
+    ]
+  },
+  {
+    "id": 43,
+    "building_name": "35 Sutton Place , New York, NY 10022",
+    "main_address": "35 Sutton Place , New York, NY 10022",
+    "service_entrance": "508 E 59th St, New York, NY 10022",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Sun : 8:30am - 6pm",
+    "estimated_time_saved": 1,
+    "images": [
+      "Images/35_sutton_place.jpeg"
+    ]
+  },
+  {
+    "id": 44,
+    "building_name": "280 Park ave, New York, NY 10017",
+    "main_address": "280 Park ave, New York, NY 10017",
+    "service_entrance": "42 E 49th St, New York, NY 10017",
+    "avg_delivery_time": "5-8 min",
+    "delivery_access":" Mon-Fri : 7am - 6pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/280_park_ave.jpeg"
+    ]
+  },
+  {
+    "id": 45,
+    "building_name": "810 Seventh Avenue, New York, NY 10019",
+    "main_address": "810 Seventh Avenue, New York, NY 10019",
+    "service_entrance": "215 W 52nd St, New York, NY 10019",
+    "avg_delivery_time": "4-7 min",
+    "delivery_access":" Mon-Fri : 8am - 5pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/810_seventh_ave_im1.jpeg",
+      "Images/810_seventh_ave_im2.jpeg"
+    ]
+  },
+  {
+    "id": 46,
+    "building_name": "205 E 85th St, New York, NY 10028",
+    "main_address": "205 E 85th St, New York, NY 10028",
+    "service_entrance": "204 E 86th St, New York, NY 10028",
+    "avg_delivery_time": "2-3 min",
+    "delivery_access":" 24/7 ",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/205_e_85th_st.jpeg"
+    ]
   }
 
-
-
-  
-  
-  
 
 ]

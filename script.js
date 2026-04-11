@@ -396,6 +396,8 @@ function countBuildingTimeSaved(buildingId, minutes) {
   addTimeSaved(weekKey, "timeSavedByWeek", numericMinutes);
   addTimeSaved(monthKey, "timeSavedByMonth", numericMinutes);
 
+  updateTimeSavedDisplay();
+
   countedData[todayKey].push(buildingId);
   localStorage.setItem(countedKey, JSON.stringify(countedData));
 
@@ -423,4 +425,10 @@ function getMonthTimeSaved() {
   const monthKey = getMonthKey();
   const data = JSON.parse(localStorage.getItem("timeSavedByMonth")) || {};
   return data[monthKey] || 0;
+}
+
+
+function updateTimeSavedDisplay() {
+  const total = localStorage.getItem("totalTimeSaved") || 0;
+  document.getElementById("totalSaved").innerText = total + " min";
 }

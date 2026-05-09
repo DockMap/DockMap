@@ -92,7 +92,7 @@
     "delivery_access": "Every day, every time",
     "estimated_time_saved": 2,
     "images": [
-      ""
+      "Image/11_riverside_dr.jpeg"
     ]
   },
   {
@@ -575,7 +575,103 @@
     "images": [
       "Images/205_e_85th_st.jpeg"
     ]
-  }
+  },
+  {
+    "id": 47,
+    "building_name": "160 E 38th St, New York, NY 10016",
+    "main_address": "160 E 38th St, New York, NY 10016",
+    "service_entrance": "560 Third Ave, New York, NY 10016",
+    "avg_delivery_time": "3-4 min",
+    "delivery_access":" 24/7 ",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/160_3rd_ave.jpeg"
+    ]
+  },
+  
+  {
+    "id": 48,
+    "building_name": "322 W 57th St, New York, NY 10019",
+    "main_address": "322 W 57th St, New York, NY 10019",
+    "service_entrance": "319 W 56th St, New York, NY 10019",
+    "avg_delivery_time": "4-5 min",
+    "delivery_access":" Mon-Sat : 8:30am - 5pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/322_w_57th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 49,
+    "building_name": "752 5th Ave, New York, NY 10022",
+    "main_address": "752 5th Ave, New York, NY 10022",
+    "service_entrance": "10 E 59th Ave, New York, NY 10022",
+    "instruction": "Food: handled by staff. Other deliveries (UPS, FedEx, Amazon, etc.): use freight elevator.",
+    "avg_delivery_time": "2-8 min",
+    "delivery_access":" Mon-Fri : 8am - 6pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/752_5th_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 50,
+    "building_name": "401 E 34th St, New York, NY 10016",
+    "main_address": "401 E 34th St, New York, NY 10016",
+    "service_entrance": "435 E 35th St, New York, NY 10016",
+    "avg_delivery_time": "2-5 min",
+    "delivery_access":" 24/7 ",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/401_e_34th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 51,
+    "building_name": "330 E 38th St, New York, NY 10016",
+    "main_address": "330 E 38th St, New York, NY 10016",
+    "service_entrance": "330 E 38th St, New York, NY 10016",
+    "instruction": " Inside the garage ",
+    "avg_delivery_time": "3-5 min",
+    "delivery_access":" Mon-Sun : 7am - 10pm",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/330_e_38th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 52,
+    "building_name": "150 E 69th St, New York, NY 10021",
+    "main_address": "150 E 69th St, New York, NY 10021",
+    "service_entrance": "197 E 68th St, New York, NY 10021",
+    "avg_delivery_time": "3-5 min",
+    "delivery_access":" Mon-Fri : 8am - 8pm",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/150_e_69th_st.jpeg"
+    ]
+  },
+  
+  {
+    "id": 53,
+    "building_name": "300 E 75th St, New York, NY 10021",
+    "main_address": "300 E 75th St, New York, NY 10021",
+    "service_entrance": "309 E 74th St, New York, NY 10021",
+    "avg_delivery_time": "3-5 min",
+    "delivery_access":" Mon-Sun : 7am - 11pm",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/300_e_75th_st_im1.jpeg",
+      "Images/300_e_75th_st_im2.jpeg"
+    ]
+  },
+
+ 
+
 
 
 ]

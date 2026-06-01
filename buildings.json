@@ -606,7 +606,7 @@
     "id": 49,
     "building_name": "752 5th Ave, New York, NY 10022",
     "main_address": "752 5th Ave, New York, NY 10022",
-    "service_entrance": "10 E 59th Ave, New York, NY 10022",
+    "service_entrance": "10 E 59th St, New York, NY 10022",
     "instruction": "Food: handled by staff. Other deliveries (UPS, FedEx, Amazon, etc.): use freight elevator.",
     "avg_delivery_time": "2-8 min",
     "delivery_access":" Mon-Fri : 8am - 6pm",
@@ -668,10 +668,114 @@
       "Images/300_e_75th_st_im1.jpeg",
       "Images/300_e_75th_st_im2.jpeg"
     ]
+  },
+
+  {
+    "id": 54,
+    "building_name": "262 Central Park West, New York, NY 10024",
+    "main_address": "262 Central Park West, New York, NY 10024",
+    "service_entrance": "4 West 87th St, New York, NY 10024",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Sat : 8am - 5pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/262_cpW.jpeg"
+    ]
+  },
+
+  {
+    "id": 55,
+    "building_name": "200 Central Park South, New York, NY 10019",
+    "main_address": "200 Central Park South, New York, NY 10019",
+    "service_entrance": "920 7th Avenue, New York, NY 10019",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Fri : 8:am - 7pm  || Sat-Sun : 8am - 4pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/200_cps.jpeg"
+    ]
+  },
+
+  {
+    "id": 56,
+    "building_name": "220 E 65th St, New York, NY 10065",
+    "main_address": "220 E 65th St, New York, NY 10065",
+    "service_entrance": "225 E 64th St, New York, NY 10065",
+    "avg_delivery_time": "4-6 min (The elevator can be slow to arrive during busy periods)",
+    "delivery_access":" Mon-Fri : 8:am - 7pm  || Sat-Sun : 8am - 4pm",
+    "estimated_time_saved": 4,
+    "images": [
+      "Images/200_e_65th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 57,
+    "building_name": "155 W 68th St, New York, NY 10023",
+    "main_address": "155 W 68th St, New York, NY 10023",
+    "service_entrance": "166 W 69th St, New York, NY 10023",
+    "avg_delivery_time": "4-6 min (The elevator can be slow to arrive during busy periods)",
+    "delivery_access":" Open 24/7 ",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/155_w_68th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 58,
+    "building_name": "1735 York Ave, New York, NY 10128",
+    "main_address": "1735 York Ave, New York, NY 10128",
+    "service_entrance": "435 E 90nd St, New York, NY 10128",
+    "avg_delivery_time": " 3-4 min",
+    "delivery_access":" Open 24/7",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/1735_york_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 59,
+    "building_name": "100 W 68th St, New York, NY 10023",
+    "main_address": "100 W 68th St, New York, NY 10023",
+    "service_entrance": "101-111 W 67th St, New York, NY 10023",
+    "avg_delivery_time":"1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Open 24/7",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/100_w_68th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 60,
+    "building_name": "1700 Broadway, New York, NY 10019",
+    "main_address": "1700 Broadway, New York, NY 10019",
+    "service_entrance": "216 W 54th St, New York, NY 10019",
+    "avg_delivery_time":"4-6 min",
+    "delivery_access":"  Mon-Fri : 8am - 5pm",
+    "estimated_time_saved": 2,
+    "id_required": true,
+    "images": [
+      "Images/1700_broadway.jpeg"
+    ]
+  },
+
+   {
+    "id": 61,
+    "building_name": "50 W 34th St, New York, NY 10001",
+    "main_address": "50 W 34th St, New York, NY 10001",
+    "service_entrance": "51 W 33th St, New York, NY 10001",
+    "avg_delivery_time":"4-6 min",
+    "delivery_access":"  Mon-Fri : 8am - 4pm",
+    "estimated_time_saved": 2,
+    "id_required": true,
+    "images": [
+      "Images/50_w_34th_st.jpeg"
+    ]
   }
 
+
  
-
-
-
 ]

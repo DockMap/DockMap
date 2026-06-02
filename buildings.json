@@ -190,7 +190,7 @@
   "same_as_main": true,
   "instruction": "Service entrance is down a slope next to the garage.",
   "avg_delivery_time": "2 min (Package is taken by staff at the service entrance)",
-  "delivery_access": "Mon-Sun 7am-6pm, other days and times use front entrance",
+  "delivery_access": "Mon-Fri : 7am-6pm, other days and times use front entrance",
   "estimated_time_saved": 2,
   "images": [
     "Images/15_w_72_st_im1.jpeg",
@@ -244,7 +244,7 @@
     "instruction": "Use the long hallway beside the main entrance, in front of the garage",
     "same_as_main": true,
     "avg_delivery_time": " 5 min(Elevator may take some time)",
-    "delivery_access":"Mon-Fri 9am-5pm, others days and times use front entrance",
+    "delivery_access":" Open 24/7 ",
     "estimated_time_saved": 2,
    "images": [
       "Images/340_e_64th_st_im1.jpeg",
@@ -407,7 +407,7 @@
     "main_address": "300 Central Park West, New York, NY 10024",
     "service_entrance": "22 W 91st St, New York, NY 10024",
     "avg_delivery_time": "1 min(Package is taken by staff at the service entrance)",
-    "delivery_access":" Mon-Fri: 8am - 8pm",
+    "delivery_access":" Mon-Sat: 8am - 8pm",
     "estimated_time_saved": 2,
     "images": [
       "Images/300_cpw.jpeg"
@@ -762,7 +762,7 @@
     ]
   },
 
-   {
+  {
     "id": 61,
     "building_name": "50 W 34th St, New York, NY 10001",
     "main_address": "50 W 34th St, New York, NY 10001",
@@ -774,7 +774,206 @@
     "images": [
       "Images/50_w_34th_st.jpeg"
     ]
+  },
+
+  {
+    "id": 62,
+    "building_name": "1 Pennsylvania Plaza, New York, NY 10119",
+    "main_address": "1 Pennsylvania Plaza, New York, NY 10119",
+    "service_entrance": "245 W 33th St, New York, NY 10119",
+    "avg_delivery_time":"1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Sun : 8am - 6pm",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/245_w_33th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 63,
+    "building_name": "200 E 57th St, New York, NY 10019",
+    "main_address": "200 E 57th St, New York, NY 10019",
+    "service_entrance": "205 E 56th St, New York, NY 10019",
+    "avg_delivery_time":"4-6 min",
+    "delivery_access":"  Mon-Sun : 7am - 9pm",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/200_e_57th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 64,
+    "building_name": "190 E 72th St, New York, NY 10021",
+    "main_address": "190 E 72th St, New York, NY 10021",
+    "service_entrance": "191 E 71th St, New York, NY 10021",
+    "avg_delivery_time":"1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":"  Mon-Fri : 8am - 6pm  || Sat : 8am - 4pm",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/190_e_72th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 65,
+    "building_name": "201 E 79th St, New York, NY 10075",
+    "main_address": "201 E 79th St, New York, NY 10075",
+    "service_entrance": "200 E 80th St, New York, NY 10075",
+    "avg_delivery_time":"1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":"  Open 24/7",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/201_e_79th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 66,
+    "building_name": "375 Park Avenue, New York, NY 10152",
+    "main_address": "375 Park Avenue, New York, NY 10152",
+    "service_entrance": "101 E 52nd St, New York, NY 10022",
+    "avg_delivery_time":"4-6 min",
+    "delivery_access":" Mon-Fri : 8am - 6pm",
+    "estimated_time_saved": 3,
+    "id_required": true,
+    "images": [
+      "Images/375_park_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 67,
+    "building_name": "145-146 Central Park West, New York, NY 10023",
+    "main_address": "145-146 Central Park West, New York, NY 10023",
+    "service_entrance": "9 W 74th St, New York, NY 10023",
+    "avg_delivery_time":"2-3 min",
+    "delivery_access":" Mon-Sun : 8am - 10pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/  .jpeg"
+    ]
+  },
+
+  {
+    "id": 68,
+    "building_name": "1290 6th Ave, New York, NY 10019",
+    "main_address": "1290 6th Ave, New York, NY 10019",
+    "service_entrance": "52 W 52nd St, New York, NY 10019",
+    "avg_delivery_time":"4-6 min",
+    "delivery_access":" Mon-Fri : 8am - 5pm",
+    "estimated_time_saved": 3,
+    "id_required": true,
+    "images": [
+      "Images/1290_6th_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 69,
+    "building_name": "640 5th Ave, New York, NY 10019",
+    "main_address": "640 5th Ave, New York, NY 10019",
+    "service_entrance": "6 W 52nd St, New York, NY 10019",
+    "avg_delivery_time":"4-6 min",
+    "delivery_access":" Mon-Fri : 8am - 5pm",
+    "estimated_time_saved": 4,
+    "id_required": true,
+    "images": [
+      "Images/640_5th_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 70,
+    "building_name": "45 Sutton Place S, New York, NY 10022",
+    "main_address": "45 Sutton Place S, New York, NY 10022",
+    "service_entrance": "500 E 55nd St, New York, NY 10022",
+    "avg_delivery_time":"1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Sun : 7am - 8pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/45_sutton_pl_s.jpeg"
+    ]
+  },
+  
+  {
+    "id": 71,
+    "building_name": "25 Sutton Place S, New York, NY 10022",
+    "main_address": "25 Sutton Place S, New York, NY 10022",
+    "service_entrance": "501 E 55nd St, New York, NY 10022",
+    "avg_delivery_time":"1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Sun : 7am - 8pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/25_sutton_pl_s.jpeg"
+    ]
+  },
+
+  {
+    "id": 72,
+    "building_name": "110 5th Ave, New York, NY 10011",
+    "main_address": "110 5th Ave, New York, NY 10011",
+    "service_entrance": "1 W 16th Ave, New York, NY 10011",
+    "avg_delivery_time":"3-4 min",
+    "delivery_access":"Mon-Fri : 8am - 12pm, 1pm - 5pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/110_5th_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 73,
+    "building_name": "925 Park Avenue, New York, NY 10028",
+    "main_address": "925 Park Avenue, New York, NY 10028",
+    "service_entrance": "101 E 80th St, New York, NY 10028",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Sat : 7am - 7pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/925_park_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 74,
+    "building_name": "993 Park Avenue, New York, NY 10028",
+    "main_address": "993 Park Avenue, New York, NY 10028",
+    "service_entrance": "114 E 84th St, New York, NY 10028",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Fri : 9am - 4pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/993_park_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 75,
+    "building_name": "1125 Park Avenue, New York, NY 10128",
+    "main_address": "1125 Park Avenue, New York, NY 10128",
+    "service_entrance": "113 E 90th St, New York, NY 10128",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Fri : 9am - 4pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/993_park_ave.jpeg"
+    ]
   }
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
  

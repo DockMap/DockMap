@@ -954,12 +954,80 @@
     "main_address": "1125 Park Avenue, New York, NY 10128",
     "service_entrance": "113 E 90th St, New York, NY 10128",
     "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
-    "delivery_access":" Mon-Fri : 9am - 4pm",
+    "delivery_access":" Mon-Sat : 9am - 6pm",
     "estimated_time_saved": 2,
     "images": [
-      "Images/993_park_ave.jpeg"
+      "Images/1125_park_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 76,
+    "building_name": "146 W 57th St, New York, NY 10019",
+    "main_address": "146 W 57th St, New York, NY 10019",
+    "service_entrance": "155 W 56th St, New York, NY 10019",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Fri 8:30am - 5pm(Except holiday's",
+    "instruction": "Service entrance is next to the garage.",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/146_w_57th_st.jpeg"
+    ]
+  },
+
+  
+  {
+    "id": 77,
+    "building_name": "1349 Lexington Avenue, New York, NY 10128",
+    "main_address": "1349 Lexington Avenue, New York, NY 10128",
+    "service_entrance": "150 E 90th St, New York, NY 10128",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Fri : 9am - 5pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/1349_lexington_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 78,
+    "building_name": "106 Central Park South , New York, NY 10019",
+    "main_address": "106 Central Park South , New York, NY 10019",
+    "service_entrance": "105 W 58th St, New York, NY 10019",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon-Sun : 7am - 8pm",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/106_cps.jpeg"
+    ]
+  },
+
+  {
+    "id": 79,
+    "building_name": "590 Madison Avenue, New York, NY 10022",
+    "main_address": "590 Madison Avenue, New York, NY 10022",
+    "service_entrance": "9 E 56th St, New York, NY 10022",
+    "avg_delivery_time": "6-12 min",
+    "delivery_access":" Mon-Sun : 7am - 5:45pm",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/590_madison_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 80,
+    "building_name": "787 7th Avenue, New York, NY 10019",
+    "main_address": "787 7th Avenue, New York, NY 10019",
+    "service_entrance": "142 W 52th St, New York, NY 10019",
+    "avg_delivery_time": "6-10 min",
+    "delivery_access":" Mon-Fri : 7am - 5pm",
+    "estimated_time_saved": 3,
+    "images": [
+      "Images/787_7th_ave.jpeg"
     ]
   }
+
 
 
   

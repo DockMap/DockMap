@@ -3,47 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>DockMap</title>
+
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L84Q4V2CJ"></script>
- <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4L84Q4V2CJ"
+  ></script>
 
-  gtag('config', 'G-4L84Q4V2CJ');
- </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-4L84Q4V2CJ");
+  </script>
 </head>
+
 <body>
+  <!-- Logo et compteur -->
+  <header class="topbar">
+    <a class="brand" href="./">
+      <span class="brand-mark" aria-hidden="true">↳</span>
+      DockMap
+    </a>
 
+    <span id="totalSaved">Today saved: 0 min</span>
+  </header>
 
-  <div id="totalSaved" style="text-align:center; margin-bottom:15px; font-weight:bold;">
-  ⏱ Total saved: 0 min
-  </div>
-
-  <div class="container">
+  <main class="container">
+    <!-- Présentation -->
     <header class="hero">
-      <h1>DockMap</h1>
-      <p>Find the correct service entrance for your delivery.</p>
+      <p class="eyebrow">A BETTER WAY TO DELIVER</p>
+
+      <h1>
+        The right entrance.<br />
+        One less detour.
+      </h1>
+
+      <p>Find the service entrance before you arrive.</p>
     </header>
 
-    <section class="search-box">
-   <div class="search-wrapper">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Enter building address (example: 200 Chambers St)"
-      autocomplete="off"
-    />
-    <div id="suggestions" class="suggestions"></div>
-  </div>
+    <!-- Recherche -->
+    <section class="search-box" aria-label="Find a building">
+      <label for="searchInput">Building address</label>
 
-</section>
+      <div class="search-row">
+        <div class="search-wrapper">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="e.g. 50 W 34th St"
+            autocomplete="off"
+            aria-controls="suggestions"
+            aria-expanded="false"
+          />
 
-    <section id="result" class="result hidden"></section>
-  </div>
+          <div id="suggestions" class="suggestions"></div>
+        </div>
+
+        <button id="searchBtn" type="button">
+          Search
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <p id="searchStatus" role="status">
+        Loading addresses…
+      </p>
+    </section>
+
+    <!-- Résultat rempli par le JavaScript -->
+    <section
+      id="result"
+      class="result hidden"
+      aria-label="Entrance details"
+    ></section>
+
+    <footer>
+      Made for deliveries. Built around the right entrance.
+    </footer>
+  </main>
+
+  <!-- Affichage des photos en grand -->
+  <dialog id="photoDialog" aria-label="Entrance photos">
+    <button
+      class="dialog-close"
+      type="button"
+      aria-label="Close photo"
+    >
+      ×
+    </button>
+
+    <img id="fullPhoto" alt="" />
+
+    <div class="dialog-tools">
+      <button
+        class="previous"
+        type="button"
+        aria-label="Previous photo"
+      >
+        ←
+      </button>
+
+      <span class="photo-count"></span>
+
+      <button
+        class="next"
+        type="button"
+        aria-label="Next photo"
+      >
+        →
+      </button>
+    </div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>

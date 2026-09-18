@@ -118,7 +118,7 @@
     "delivery_access":"Open 24/7",
     "estimated_time_saved": 2,
     "images": [
-      ""
+      "Images/200_rector_pl.jpeg"
     ]
   },
   {
@@ -821,7 +821,7 @@
     "main_address": "201 E 79th St, New York, NY 10075",
     "service_entrance": "200 E 80th St, New York, NY 10075",
     "avg_delivery_time":"1-2 min (Package is taken by staff at the service entrance)",
-    "delivery_access":"  Open 24/7",
+    "delivery_access": " Mon - Fri : 8am - 7pm  || Sat - Sun : 9am - 7pm",
     "estimated_time_saved": 3,
     "images": [
       "Images/201_e_79th_st.jpeg"
@@ -1094,7 +1094,7 @@
     "delivery_access":" Open 24/7 ",
     "estimated_time_saved": 2,
     "images": [
-      "Images/502_park_west.jpeg"
+      "Images/502_park_ave.jpeg"
     ]
   },
 
@@ -1202,7 +1202,180 @@
    "images": [
       "Images/530_7th_ave.jpeg"
     ]
+  },
+
+  {
+    "id": 93,
+    "building_name": "101 Central Park West, New York, NY 10023",
+    "main_address": "101 Central Park West, New York, NY 10023",
+    "service_entrance": "7 W 70th St, New York, NY 10023",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Sat : 8am - 4:30pm",
+    "estimated_time_saved": 2,
+   "images": [
+      "Images/101_cpw.jpeg"
+    ]
+  },
+
+   {
+    "id": 94,
+    "building_name": "320 Central Park West, New York, NY 10025",
+    "main_address": "320 Central Park West, New York, NY 10025",
+    "service_entrance": "30 W 92nd St, New York, NY 10025",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Fri : 8:30am - 4:30pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/320_cpw.jpeg"
+    ]
+  },
+
+  {
+    "id": 95,
+    "building_name": "1175 Park Ave, New York, NY 10128",
+    "main_address": "1175 Park Ave, New York, NY 10128",
+    "service_entrance": "110 E 93rd St, New York, NY 10128",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Sat : 7am - 5pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/1175_park_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 96,
+    "building_name": "1365 York Ave, New York, NY 10021",
+    "main_address": "1365 York Ave, New York, NY 10021",
+    "service_entrance": "428 E 73rd St, New York, NY 10021",
+    "avg_delivery_time": "3-4 min",
+    "delivery_access":" Mon - Sun : 7am - 12pm",
+    "estimated_time_saved": 2,
+    "images": [
+      "Images/1365_york_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 97,
+    "building_name": "160 Riverside Blvd, New York, NY 10069",
+    "main_address": "160 Riverside Blvd, New York, NY 10069",
+    "service_entrance": "444 W 68th St, New York, NY 10069",
+    "avg_delivery_time": "3-4 min",
+    "delivery_access":" Mon - Sun : 7am - 12pm",
+    "estimated_time_saved": 2,
+    "instruction":"Service entrance is before the garage.",
+    "images": [
+      "Images/160_rsb.jpeg"
+    ]
+  },
+
+  {
+    "id": 98,
+    "building_name": "160 Riverside Blvd, New York, NY 10069",
+    "main_address": "160 Riverside Blvd, New York, NY 10069",
+    "service_entrance": "444 W 68th St, New York, NY 10069",
+    "avg_delivery_time": "3-4 min",
+    "delivery_access":" Mon - Sun : 7am - 12pm",
+    "estimated_time_saved": 2,
+    "instruction":"Service entrance is before the garage.",
+    "images": [
+      "Images/160_rsb.jpeg"
+    ]
+  },
+
+  {
+    "id": 99,
+    "building_name": "1 Rockefeller Plaza, New York, NY 10020",
+    "main_address": "1 Rockefeller Plaza, New York, NY 10020",
+    "service_entrance": "41 W 50th St, New York, NY 10020",
+    "avg_delivery_time": "10-15 min",
+    "delivery_access":" Mon - Fri : 7am - 6pm",
+    "estimated_time_saved": 4,
+    "id_required" : true,
+    "images": [
+     "Images/1-rockefeller-plaza_600-5th-ave_30-rockefeller-plaza.jpeg"
+    ]
+  },
+
+  
+  {
+    "id": 100,
+    "building_name": "600 5th , New York, NY 10020",
+    "main_address": "600 5th, New York, NY 10020",
+    "service_entrance": "41 W 50th St, New York, NY 10020",
+    "avg_delivery_time": "10-15 min",
+    "delivery_access":" Mon - Fri : 7am - 6pm",
+    "estimated_time_saved": 4,
+    "id_required" : true,
+    "images": [
+     "Images/1-rockefeller-plaza_600-5th-ave_30-rockefeller-plaza.jpeg"
+    ]
+  },
+
+  {
+    "id": 101,
+    "building_name": "30 Rockefeller Plaza , New York, NY 10020",
+    "main_address": "30 Rockefeller Plaza, New York, NY 10020",
+    "service_entrance": "41 W 50th St, New York, NY 10020",
+    "avg_delivery_time": "10-15 min",
+    "delivery_access":" Mon - Fri : 7am - 6pm",
+    "estimated_time_saved": 4,
+    "id_required" : true,
+    "images": [
+     "Images/1-rockefeller-plaza_600-5th-ave_30-rockefeller-plaza.jpeg"
+    ]
+  },
+
+  {
+    "id": 102,
+    "building_name": "511 5th Ave, New York, NY 10017",
+    "main_address": "511 5th Ave, New York, NY 10017",
+    "service_entrance": "2 E 43rd St, New York, NY 10017",
+    "avg_delivery_time": "3-7 min",
+    "delivery_access":" Mon - Fri : 8am - 5pm",
+    "estimated_time_saved": 4,
+    "images": [
+     "Images/511_5th_ave.jpeg"
+    ]
+  },
+
+  {
+    "id": 104,
+    "building_name": "245 East 63rd St, New York, NY 10065",
+    "main_address": "245 East 63rd St, New York, NY 10065",
+    "service_entrance": "1215 2nd Ave, New York, NY 10065",
+    "avg_delivery_time": "3-7 min",
+    "delivery_access":" Mon - Sun : 8am - 11pm",
+    "estimated_time_saved": 2,
+    "images": [
+     "Images/245_e_63rd_st.jpeg"
+    ]
+  },
+
+  {
+    "id": 105,
+    "building_name": "195 Broadway, New York, NY 10007",
+    "main_address": "195 Broadway, New York, NY 10007",
+    "service_entrance": "198 Fulton St, New York, NY 10007",
+    "avg_delivery_time": "3-7 min",
+    "delivery_access":" Mon - Fri : 8am - 6pm",
+    "estimated_time_saved": 3,
+    "id_required" : true,
+    "images": [
+     "Images/195_broadway.jpeg"
+    ]
   }
+
+
+
+  
+
+
+
+
+
+
 
 
 

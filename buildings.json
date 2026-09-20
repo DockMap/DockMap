@@ -1352,18 +1352,99 @@
     "images": [
      "Images/195_broadway.jpg"
     ]
+  },
+
+  {
+    "id": 104,
+    "building_name": "28 Liberty, New York, NY 10005",
+    "main_address": "28 Liberty, New York, NY 10005",
+    "service_entrance": "26 Liberty, New York, NY 10005",
+    "avg_delivery_time": "3-7 min",
+    "delivery_access":" Mon - Fri : 7am - 6pm",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "images": [
+     "Images/28_liberty.jpg"
+    ]
+  },
+
+  {
+    "id": 105,
+    "building_name": "880 5th Avenue, New York, NY 10021",
+    "main_address": "880 5th Avenue, New York, NY 10021",
+    "service_entrance": "1 John D. Hertz Dr, New York, NY 10021",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Fri : 7am - 8pm || Sat - Sun : 8am - 4pm ",
+    "estimated_time_saved": 2,
+    "images": [
+     "Images/880_5th_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 106,
+    "building_name": "200 E 66th St, New York, NY 10065",
+    "main_address": "200 E 66th St, New York, NY 10065",
+    "service_entrance": "249 E 65th St, New York, NY 10065",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Sun : 7am - 11:50pm ",
+    "estimated_time_saved": 3,
+    "images": [
+     "Images/200_e_66th_st.jpg"
+    ]
+  },
+
+  {
+    "id": 107,
+    "building_name": "15 W 81nd St, New York, NY 10024",
+    "main_address": "15 W 81nd St, New York, NY 10024",
+    "service_entrance": "18 - 22 W 82nd St, New York, NY 10024",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Sat : 8am - 8pm ",
+    "estimated_time_saved": 3,
+    "images": [
+     "Images/15_w_81nd_st.jpg"
+    ]
+  },
+
+  {
+    "id": 108,
+    "building_name": "200 E 69th St, New York, NY 10021",
+    "main_address": "200 E 69th St, New York, NY 10021",
+    "service_entrance": "205 E 68th St, New York, NY 10065",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Sun : 6am - 8pm ",
+    "estimated_time_saved": 3,
+    "images": [
+     "Images/200_e_69th_st.jpg"
+    ]
+  },
+
+   {
+    "id": 109,
+    "building_name": "200 E 69th St, New York, NY 10021",
+    "main_address": "200 E 69th St, New York, NY 10021",
+    "service_entrance": "205 E 68th St, New York, NY 10065",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Sun : 6am - 8pm ",
+    "estimated_time_saved": 3,
+    "images": [
+     "Images/200_e_69th_st.jpg"
+    ]
   }
 
 
 
+
+
+
+
+
+
+
+
+
   
-
-
-
-
-
-
-
 
 
 

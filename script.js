@@ -412,7 +412,7 @@ function displayResult(building) {
       </div>
 
       <aside class="delivery-details">
-        <h3>Before you arrive</h3>
+      
 
         <div class="detail">
           <span>Delivery access</span>

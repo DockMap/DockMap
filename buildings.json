@@ -1213,7 +1213,7 @@
     "delivery_access":" Mon - Sat : 8am - 4:30pm",
     "estimated_time_saved": 2,
    "images": [
-      "Images/101_cpw.jpeg"
+      "Images/101_cpw.jpg"
     ]
   },
 
@@ -1226,7 +1226,7 @@
     "delivery_access":" Mon - Fri : 8:30am - 4:30pm",
     "estimated_time_saved": 2,
     "images": [
-      "Images/320_cpw.jpeg"
+      "Images/320_cpw.jpg"
     ]
   },
 
@@ -1239,7 +1239,7 @@
     "delivery_access":" Mon - Sat : 7am - 5pm",
     "estimated_time_saved": 2,
     "images": [
-      "Images/1175_park_ave.jpeg"
+      "Images/1175_park_ave.jpg"
     ]
   },
 
@@ -1252,9 +1252,10 @@
     "delivery_access":" Mon - Sun : 7am - 12pm",
     "estimated_time_saved": 2,
     "images": [
-      "Images/1365_york_ave.jpeg"
+      "Images/1365_york_ave.jpg"
     ]
   },
+
 
   {
     "id": 97,
@@ -1266,26 +1267,12 @@
     "estimated_time_saved": 2,
     "instruction":"Service entrance is before the garage.",
     "images": [
-      "Images/160_rsb.jpeg"
+      "Images/160_rsb.jpg"
     ]
   },
 
   {
     "id": 98,
-    "building_name": "160 Riverside Blvd, New York, NY 10069",
-    "main_address": "160 Riverside Blvd, New York, NY 10069",
-    "service_entrance": "444 W 68th St, New York, NY 10069",
-    "avg_delivery_time": "3-4 min",
-    "delivery_access":" Mon - Sun : 7am - 12pm",
-    "estimated_time_saved": 2,
-    "instruction":"Service entrance is before the garage.",
-    "images": [
-      "Images/160_rsb.jpeg"
-    ]
-  },
-
-  {
-    "id": 99,
     "building_name": "1 Rockefeller Plaza, New York, NY 10020",
     "main_address": "1 Rockefeller Plaza, New York, NY 10020",
     "service_entrance": "41 W 50th St, New York, NY 10020",
@@ -1294,13 +1281,13 @@
     "estimated_time_saved": 4,
     "id_required" : true,
     "images": [
-     "Images/1-rockefeller-plaza_600-5th-ave_30-rockefeller-plaza.jpeg"
+     "Images/1-rockefeller-plaza_600-5th-ave_30-rockefeller-plaza.jpg"
     ]
   },
 
   
   {
-    "id": 100,
+    "id": 99,
     "building_name": "600 5th , New York, NY 10020",
     "main_address": "600 5th, New York, NY 10020",
     "service_entrance": "41 W 50th St, New York, NY 10020",
@@ -1309,12 +1296,12 @@
     "estimated_time_saved": 4,
     "id_required" : true,
     "images": [
-     "Images/1-rockefeller-plaza_600-5th-ave_30-rockefeller-plaza.jpeg"
+     "Images/1-rockefeller-plaza_600-5th-ave_30-rockefeller-plaza.jpg"
     ]
   },
 
   {
-    "id": 101,
+    "id": 100,
     "building_name": "30 Rockefeller Plaza , New York, NY 10020",
     "main_address": "30 Rockefeller Plaza, New York, NY 10020",
     "service_entrance": "41 W 50th St, New York, NY 10020",
@@ -1323,12 +1310,12 @@
     "estimated_time_saved": 4,
     "id_required" : true,
     "images": [
-     "Images/1-rockefeller-plaza_600-5th-ave_30-rockefeller-plaza.jpeg"
+     "Images/1-rockefeller-plaza_600-5th-ave_30-rockefeller-plaza.jpg"
     ]
   },
 
   {
-    "id": 102,
+    "id": 101,
     "building_name": "511 5th Ave, New York, NY 10017",
     "main_address": "511 5th Ave, New York, NY 10017",
     "service_entrance": "2 E 43rd St, New York, NY 10017",
@@ -1336,12 +1323,12 @@
     "delivery_access":" Mon - Fri : 8am - 5pm",
     "estimated_time_saved": 4,
     "images": [
-     "Images/511_5th_ave.jpeg"
+     "Images/511_5th_ave.jpg"
     ]
   },
 
   {
-    "id": 104,
+    "id": 102,
     "building_name": "245 East 63rd St, New York, NY 10065",
     "main_address": "245 East 63rd St, New York, NY 10065",
     "service_entrance": "1215 2nd Ave, New York, NY 10065",
@@ -1349,12 +1336,12 @@
     "delivery_access":" Mon - Sun : 8am - 11pm",
     "estimated_time_saved": 2,
     "images": [
-     "Images/245_e_63rd_st.jpeg"
+     "Images/245_e_63rd_st.jpg"
     ]
   },
 
   {
-    "id": 105,
+    "id": 103,
     "building_name": "195 Broadway, New York, NY 10007",
     "main_address": "195 Broadway, New York, NY 10007",
     "service_entrance": "198 Fulton St, New York, NY 10007",
@@ -1363,7 +1350,7 @@
     "estimated_time_saved": 3,
     "id_required" : true,
     "images": [
-     "Images/195_broadway.jpeg"
+     "Images/195_broadway.jpg"
     ]
   }
 

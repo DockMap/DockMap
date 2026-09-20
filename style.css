@@ -628,3 +628,44 @@ dialog::backdrop {
     line-height: 1.5;
   }
 }
+
+/* Titres verts et semi-gras */
+.delivery-details .detail > span,
+.delivery-details .instruction > span {
+  display: block;
+  color: var(--green);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* Valeurs et explications en texte normal */
+.delivery-details .detail > strong {
+  display: block;
+  color: #1e302a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.delivery-details .detail p,
+.delivery-details .instruction p {
+  color: #1e302a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Espacement */
+.delivery-details .detail {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.delivery-details .instruction {
+  padding: 18px;
+  background: #f1f6f0;
+  border-radius: 10px;
+}

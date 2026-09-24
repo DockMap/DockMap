@@ -1396,7 +1396,7 @@
 
   {
     "id": 107,
-    "building_name": "15 W 81nd St, New York, NY 10024",
+    "building_name": "15 W 81sd St, New York, NY 10024",
     "main_address": "15 W 81nd St, New York, NY 10024",
     "service_entrance": "18 - 22 W 82nd St, New York, NY 10024",
     "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
@@ -1409,19 +1409,6 @@
 
   {
     "id": 108,
-    "building_name": "200 E 69th St, New York, NY 10021",
-    "main_address": "200 E 69th St, New York, NY 10021",
-    "service_entrance": "205 E 68th St, New York, NY 10065",
-    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
-    "delivery_access":" Mon - Sun : 6am - 8pm ",
-    "estimated_time_saved": 3,
-    "images": [
-     "Images/200_e_69th_st.jpg"
-    ]
-  },
-
-   {
-    "id": 109,
     "building_name": "200 E 69th St, New York, NY 10021",
     "main_address": "200 E 69th St, New York, NY 10021",
     "service_entrance": "205 E 68th St, New York, NY 10065",

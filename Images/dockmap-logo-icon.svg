@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">DockMap logo</title>
+  <desc id="desc">A map pin containing a service entrance and loading ramp.</desc>
+  <defs>
+    <mask id="entrance-cutout">
+      <rect width="128" height="128" fill="black"/>
+      <path d="M64 4C32 4 12 26 12 56c0 33 34 58 52 68 18-10 52-35 52-68C116 26 96 4 64 4Z" fill="white"/>
+      <path d="M42 38h44v34h-8V47H50v25h-8V38Zm8 12h28v5H50v-5Zm0 9h28v5H50v-5ZM48 70h32l12 18H36l12-18Z" fill="black"/>
+    </mask>
+  </defs>
+  <rect width="128" height="128" fill="#246347" mask="url(#entrance-cutout)"/>
+</svg>

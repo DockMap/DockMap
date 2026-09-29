@@ -189,7 +189,9 @@ function searchBuilding() {
     return;
   }
 
-  resetEngagedViewTracking();
+  resetEngagedViewTracking(); //pour voir les recherches sans resultats
+
+  trackSearchNoResults(searchInput.value);
 
   resultDiv.classList.remove("hidden");
 
@@ -626,6 +628,68 @@ dialog.addEventListener("keydown", event => {
 // ==================================================
 // Google Analytics
 // ==================================================
+
+// DEBUT DU SUIVI DES RECHERCHES SANS RESULTAT
+
+let lastMissingSearch = { term: "", sentAt: 0 };
+
+function prepareMissingSearchTerm(value) {
+  const input = String(value ?? "")
+    .trim()
+    .replace(/\s+/g, " ");
+
+  // Écarte les coordonnées personnelles évidentes.
+  if (/@|https?:|www\.|\+\d/i.test(input)) return "";
+  if (/\b(?:\d[\s().-]*){7,}\b/.test(input)) return "";
+
+  // Conserve l'adresse du bâtiment sans numéro d'appartement.
+  const term = input
+    .replace(
+      /\s*,?\s+(?:apt\.?|apartment|suite|ste\.?|unit|floor|fl\.?)\b.*$/i,
+      ""
+    )
+    .replace(/\s*#.*$/, "")
+    .trim();
+
+  if (term.length < 5 || term.length > 100) return "";
+
+  // Retient les adresses commençant par un numéro.
+  if (!/^\d+[a-z]?(?:[-–]\d+[a-z]?)?\s+.*[a-z]{2}/i.test(term)) {
+    return "";
+  }
+
+  return term;
+}
+
+function trackSearchNoResults(value) {
+  if (typeof gtag !== "function") return;
+
+  const term = prepareMissingSearchTerm(value);
+  if (!term) return;
+
+  const key = normalizeText(term);
+  const now = Date.now();
+
+  // Évite de compter deux fois un double clic immédiat.
+  if (
+    lastMissingSearch.term === key &&
+    now - lastMissingSearch.sentAt < 2000
+  ) {
+    return;
+  }
+
+  try {
+    gtag("event", "search_no_results", {
+      unmatched_address: term
+    });
+
+    lastMissingSearch = { term: key, sentAt: now };
+  } catch {
+    // La recherche continue même si Analytics échoue.
+  }
+}
+
+// FIN DU SUIVI DES RECHERCHES SANS RESULTAT
 
 function trackDeliveryAssist(actionType, building) {
   if (typeof gtag !== "function") {

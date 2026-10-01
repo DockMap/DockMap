@@ -503,6 +503,16 @@ function displayResult(building) {
     updatePhoto();
   }
 
+  // DEBUT — Consultation immediate de la fiche
+  if (typeof gtag === "function") {
+    gtag("event", "building_view", {
+      building_id: String(building.id ?? ""),
+      building_name: building.building_name || "",
+      main_address: building.main_address || ""
+    });
+  }
+  // FIN — Consultation immediate de la fiche
+
   startEngagedViewTimer(building);
 }
 

@@ -676,3 +676,112 @@ dialog::backdrop {
   display: block;
   flex-shrink: 0;
 }
+
+
+/* Bandeau d'installation DockMap */
+.install-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 730px;
+  margin: 0 auto 26px;
+  padding: 18px 54px 18px 18px;
+  background: #edf5ef;
+  border: 1px solid #d4e4d8;
+  border-radius: 14px;
+}
+
+.install-logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.install-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-width: 0;
+}
+
+.install-content h2 {
+  margin: 0;
+  color: #203c2c;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.install-button {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--green);
+  border-radius: 9px;
+  background: var(--green);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.install-button:hover {
+  background: #1b4e37;
+  border-color: #1b4e37;
+}
+
+.install-dismiss {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #52675b;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.install-dismiss:hover {
+  background: #dfece2;
+}
+
+.install-footer-button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--green);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Bandeau sur téléphone */
+@media (max-width: 600px) {
+  .install-banner {
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 48px 16px 14px;
+    margin-bottom: 20px;
+  }
+
+  .install-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .install-content h2 {
+    font-size: 14px;
+  }
+}

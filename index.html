@@ -3,10 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#246347" />
 
   <title>DockMap</title>
 
+  <link rel="manifest" href="./manifest.webmanifest" />
+
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="Images/dockmap-180.png"
+/>
+
   <link rel="stylesheet" href="style.css" />
+  <link
+    rel="icon"
+    href="Images/dockmap-logo-icon.svg"
+    type="image/svg+xml"
+  />
 
   <!-- Google Analytics -->
   <script
@@ -24,37 +38,28 @@
     gtag("js", new Date());
     gtag("config", "G-4L84Q4V2CJ");
   </script>
-
-  <link rel="icon" href="Images/dockmap-logo-icon.svg" type="image/svg+xml">
 </head>
 
 <body>
   <!-- Logo et compteur -->
   <header class="topbar">
-   <a class="brand" href="./">
-  <img
-    class="brand-logo"
-    src="Images/dockmap-logo-icon.svg"
-    alt=""
-    aria-hidden="true"
-  >
-  <span>DockMap</span>
-</a>
+    <a class="brand" href="./">
+      <img
+        class="brand-logo"
+        src="Images/dockmap-logo-icon.svg"
+        alt=""
+        aria-hidden="true"
+      />
+      <span>DockMap</span>
+    </a>
 
     <span id="totalSaved">Today saved: 0 min</span>
   </header>
 
   <main class="container">
-    <!-- Présentation -->
+    <!-- Présentation simplifiée -->
     <header class="hero">
-      <p class="eyebrow">A BETTER WAY TO DELIVER</p>
-
-      <h1>
-        The right entrance.<br />
-        One less detour.
-      </h1>
-
-      <p>Find the service entrance before you arrive.</p>
+      <h1>Find your delivery entrance.</h1>
     </header>
 
     <!-- Recherche -->
@@ -86,6 +91,44 @@
       </p>
     </section>
 
+    <!-- Installation : activée lors de l'ajout du JavaScript -->
+    <section
+      id="installBanner"
+      class="install-banner"
+      aria-labelledby="installTitle"
+      hidden
+    >
+      <img
+        class="install-logo"
+        src="Images/dockmap-logo-icon.svg"
+        width="40"
+        height="40"
+        alt=""
+        aria-hidden="true"
+      />
+
+      <div class="install-content">
+        <h2 id="installTitle">Add DockMap to your phone</h2>
+
+        <button
+          id="installButton"
+          class="install-button"
+          type="button"
+        >
+          Add to home screen
+        </button>
+      </div>
+
+      <button
+        id="dismissInstall"
+        class="install-dismiss"
+        type="button"
+        aria-label="Dismiss installation suggestion"
+      >
+        ×
+      </button>
+    </section>
+
     <!-- Résultat rempli par le JavaScript -->
     <section
       id="result"
@@ -94,7 +137,16 @@
     ></section>
 
     <footer>
-      Made for deliveries. Built around the right entrance.
+      <p>Made for deliveries. Built around the right entrance.</p>
+
+      <button
+        id="installFooterButton"
+        class="install-footer-button"
+        type="button"
+        hidden
+      >
+        Add DockMap to your phone
+      </button>
     </footer>
   </main>
 

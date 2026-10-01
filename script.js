@@ -898,3 +898,143 @@ function updateTotalDisplay() {
 }
 
 updateTotalDisplay();
+
+// ==================================================
+// Installation de DockMap sur le téléphone
+// ==================================================
+
+(() => {
+  const banner = document.getElementById("installBanner");
+  const installButton = document.getElementById("installButton");
+  const dismissButton = document.getElementById("dismissInstall");
+  const footerButton = document.getElementById("installFooterButton");
+
+  if (!banner || !installButton || !dismissButton || !footerButton) {
+    return;
+  }
+
+  const dismissalKey = "dockmapInstallDismissedUntil";
+  const sevenDays = 7 * 24 * 60 * 60 * 1000;
+  const standaloneMode = window.matchMedia("(display-mode: standalone)");
+
+  const isAppleMobile =
+    /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+  const isAndroid = /Android/i.test(navigator.userAgent);
+
+  let pendingPrompt = null;
+  let installedThisSession = false;
+  let promptOpen = false;
+  let dismissedUntil = 0;
+
+  try {
+    dismissedUntil =
+      Number(localStorage.getItem(dismissalKey)) || 0;
+  } catch {
+    // Le bouton fonctionne aussi si le stockage est bloqué.
+  }
+
+  function isStandalone() {
+    return standaloneMode.matches || navigator.standalone === true;
+  }
+
+  function refreshInstallButtons() {
+    const installed = isStandalone() || installedThisSession;
+    const canOfferHelp = isAppleMobile || isAndroid || !!pendingPrompt;
+
+    banner.hidden =
+      installed ||
+      !canOfferHelp ||
+      Date.now() < dismissedUntil;
+
+    footerButton.hidden = installed || !canOfferHelp;
+
+    installButton.disabled = promptOpen;
+    footerButton.disabled = promptOpen;
+  }
+
+  function showInstallHelp() {
+    if (isAppleMobile) {
+      window.alert(
+        "Add DockMap to your Home Screen\n\n" +
+        "1. Open this website in Safari.\n" +
+        "2. Open the Share menu (square with an upward arrow).\n" +
+        "3. Choose “Add to Home Screen”.\n" +
+        "4. Keep “Open as Web App” enabled if shown, then tap “Add”.\n\n" +
+        "If the option is missing, scroll down in the Share menu " +
+        "and select “Edit Actions”."
+      );
+      return;
+    }
+
+    window.alert(
+      "Add DockMap to your device\n\n" +
+      "Open your browser menu and look for “Add to Home screen” " +
+      "or “Install app”.\n\n" +
+      "If you are using an in-app browser, open this website " +
+      "in Chrome first.\n\n" +
+      "If no installation option appears, this browser cannot " +
+      "offer installation right now."
+    );
+  }
+
+  async function requestInstallation() {
+    if (promptOpen || isStandalone() || installedThisSession) {
+      return;
+    }
+
+    if (!pendingPrompt) {
+      showInstallHelp();
+      return;
+    }
+
+    const promptEvent = pendingPrompt;
+    pendingPrompt = null;
+    promptOpen = true;
+    refreshInstallButtons();
+
+    try {
+      await promptEvent.prompt();
+      await promptEvent.userChoice;
+    } catch {
+      showInstallHelp();
+    } finally {
+      promptOpen = false;
+      refreshInstallButtons();
+    }
+  }
+
+  window.addEventListener("beforeinstallprompt", event => {
+    event.preventDefault();
+    pendingPrompt = event;
+    refreshInstallButtons();
+  });
+
+  window.addEventListener("appinstalled", () => {
+    installedThisSession = true;
+    pendingPrompt = null;
+    refreshInstallButtons();
+  });
+
+  installButton.addEventListener("click", requestInstallation);
+  footerButton.addEventListener("click", requestInstallation);
+
+  dismissButton.addEventListener("click", () => {
+    dismissedUntil = Date.now() + sevenDays;
+
+    try {
+      localStorage.setItem(dismissalKey, String(dismissedUntil));
+    } catch {
+      // La fermeture reste effective pour cette page.
+    }
+
+    refreshInstallButtons();
+    footerButton.focus();
+  });
+
+  standaloneMode.addEventListener("change", refreshInstallButtons);
+  window.addEventListener("pageshow", refreshInstallButtons);
+
+  refreshInstallButtons();
+})();

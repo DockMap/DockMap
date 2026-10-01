@@ -394,7 +394,7 @@
     "main_address": "350 5th Ave, New York, NY 10118",
     "service_entrance": "27 W 33rd St, New York, NY 10118",
     "avg_delivery_time": "7-10 min",
-    "delivery_access":"Mon-Fri : 7am-7pm",
+    "delivery_access":"Mon-Fri : 8 am-6 pm",
     "estimated_time_saved": 3,
     "id_required": true,
     "images": [
@@ -679,7 +679,7 @@
     "delivery_access":" Mon-Sat : 8am - 5pm",
     "estimated_time_saved": 2,
     "images": [
-      "Images/262_cpW.jpeg"
+      "Images/262_cpw.jpeg"
     ]
   },
 

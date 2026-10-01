@@ -772,7 +772,18 @@ function resetEngagedViewTracking() {
 // ==================================================
 
 function getTodayKey() {
-  return new Date().toISOString().split("T")[0];
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(new Date());
+
+  const values = Object.fromEntries(
+    parts.map(part => [part.type, part.value])
+  );
+
+  return `${values.year}-${values.month}-${values.day}`;
 }
 
 function getWeekKey() {
@@ -899,6 +910,33 @@ function updateTotalDisplay() {
 
 updateTotalDisplay();
 
+// DEBUT — Actualisation du compteur journalier
+let displayedDayKey = getTodayKey();
+
+function refreshDailyCounter() {
+  displayedDayKey = getTodayKey();
+  updateTotalDisplay();
+}
+
+// Vérifie le changement de journée toutes les secondes.
+setInterval(() => {
+  if (getTodayKey() !== displayedDayKey) {
+    refreshDailyCounter();
+  }
+}, 1000);
+
+// Actualise aussi lorsque la personne revient sur DockMap.
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    refreshDailyCounter();
+  }
+});
+
+window.addEventListener("pageshow", refreshDailyCounter);
+// FIN — Actualisation du compteur journalier
+
+
+
 // ==================================================
 // Installation de DockMap sur le téléphone
 // ==================================================
@@ -958,7 +996,7 @@ updateTotalDisplay();
     if (isAppleMobile) {
       window.alert(
         "Add DockMap to your Home Screen\n\n" +
-        "1. Open this website in Safari.\n" +
+        "1. Open this website in Safari or Chrome.\n" +
         "2. Open the Share menu (square with an upward arrow).\n" +
         "3. Choose “Add to Home Screen”.\n" +
         "4. Keep “Open as Web App” enabled if shown, then tap “Add”.\n\n" +

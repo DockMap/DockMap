@@ -1418,7 +1418,22 @@
     "images": [
      "Images/200_e_69th_st.jpg"
     ]
+  },
+
+  {
+    "id": 109,
+    "building_name": "139 E 79th St, New York, NY 10075",
+    "main_address": "139 E 79th St, New York, NY 10075",
+    "service_entrance": "1148 Lexington Ave, New York, NY 10075",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Fri : 9:30am - 4:30pm ",
+    "estimated_time_saved": 2,
+    "images": [
+     "Images/139_e_79th_st.jpg"
+    ]
   }
+
+
 
 
 

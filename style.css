@@ -785,3 +785,10 @@ dialog::backdrop {
     font-size: 14px;
   }
 }
+
+.verification-date {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}

@@ -737,9 +737,9 @@
 
   {
     "id": 59,
-    "building_name": "100 W 68th St, New York, NY 10023",
+    "building_name": "101-111 W 67th St, New York, NY 10023",
     "main_address": "100 W 68th St, New York, NY 10023",
-    "service_entrance": "101-111 W 67th St, New York, NY 10023",
+    "service_entrance": "100 W 68th St, New York, NY 10023",
     "avg_delivery_time":"1-2 min (Package is taken by staff at the service entrance)",
     "delivery_access":" Open 24/7",
     "estimated_time_saved": 2,
@@ -1428,27 +1428,124 @@
     "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
     "delivery_access":" Mon - Fri : 9:30am - 4:30pm ",
     "estimated_time_saved": 2,
+    "last_verified": "2026-09",
     "images": [
      "Images/139_e_79th_st.jpg"
     ]
+  },
+
+  {
+    "id": 110,
+    "building_name": "175 W 60th St, New York, NY 10023",
+    "main_address": "175 W 60th St, New York, NY 10023",
+    "service_entrance": "21 Amsterdam Ave, New York, NY 10023",
+    "avg_delivery_time": "4-5min (You have to go upstairs)",
+    "delivery_access":" Open 24/7 ",
+    "estimated_time_saved": 1,
+    "last_verified": "2026-10",
+    "images": [
+     "Images/175_w_60th_st.png"
+    ]
+  },
+
+  {
+    "id": 111,
+    "building_name": "895 Park Ave, New York, NY 10075",
+    "main_address": "895 Park Ave, New York, NY 10075",
+    "service_entrance": "116 E 79th St, New York, NY 10075",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Sat : 8am - 5pm ",
+    "estimated_time_saved": 1,
+    "last_verified": "2026-10",
+    "images": [
+     "Images/895_park_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 112,
+    "building_name": "630 1st Ave, New York, NY 10016",
+    "main_address": "630 1st Ave, New York, NY 10016",
+    "service_entrance": "410 E 37th St, New York, NY 10016",
+    "avg_delivery_time": "3-4 min (You have to go upstairs)",
+    "delivery_access":" Open 24/7 ",
+    "estimated_time_saved": 1,
+    "last_verified": "2026-10",
+    "images": [
+     "Images/630_1st_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 113,
+    "building_name": "225 Cherry St, New York, NY 10002",
+    "main_address": "225 Cherry St, New York, NY 10002",
+    "service_entrance": "85 Pike Slip, New York, NY 10002",
+    "avg_delivery_time": "3-4 min (You have to go upstairs)",
+    "delivery_access":" Mon - Sun : 7am - 11pm ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "images": [
+     "Images/225_cherry_st.jpg"
+    ]
+  },
+
+   {
+    "id": 114,
+    "building_name": "10 E 53rd St, New York, NY 10022",
+    "main_address": "10 E 53rd St, New York, NY 10022",
+    "service_entrance": "7 E 52nd St, New York, NY 10022",
+    "avg_delivery_time": "4-5 min (You have to go upstairs)",
+    "delivery_access":" Mon - Fri : 9am - 4pm ",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+     "Images/10_e_53rd_st.jpg"
+    ]
+  },
+
+  {
+    "id": 115,
+    "building_name": "470 West End Ave, New York, NY 10024",
+    "main_address": "470 West End Ave, New York, NY 10024",
+    "service_entrance": "272 W 83rd St, New York, NY 10024",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Sat : 9am - 4pm ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "images": [
+     "Images/470_west_end_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 116,
+    "building_name": "935 Park Ave, New York, NY 10028",
+    "main_address": "935 Park Ave, New York, NY 10028",
+    "service_entrance": "102 E 81st St, New York, NY 10028",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Fri : 9am - 4:30pm ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "images": [
+     "Images/935_park_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 117,
+    "building_name": "935 Park Ave, New York, NY 10028",
+    "main_address": "935 Park Ave, New York, NY 10028",
+    "service_entrance": "102 E 81st St, New York, NY 10028",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Fri : 9am - 4:30pm ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "images": [
+     "Images/935_park_ave.jpg"
+    ]
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
 
 
 ]

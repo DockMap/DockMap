@@ -414,6 +414,22 @@ function displayResult(building) {
       </div>
 
       <aside class="delivery-details">
+
+      ${
+  /^\d{4}-(0[1-9]|1[0-2])$/.test(building.last_verified || "")
+    ? `
+      <p class="verification-date">
+        Last verified: ${
+          new Intl.DateTimeFormat("en-US", {
+            month: "long",
+            year: "numeric",
+            timeZone: "UTC"
+          }).format(new Date(building.last_verified + "-01T00:00:00Z"))
+        }
+      </p>
+    `
+    : ""
+  }
       
 
         <div class="detail">

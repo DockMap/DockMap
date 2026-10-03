@@ -1535,17 +1535,61 @@
 
   {
     "id": 117,
-    "building_name": "935 Park Ave, New York, NY 10028",
-    "main_address": "935 Park Ave, New York, NY 10028",
-    "service_entrance": "102 E 81st St, New York, NY 10028",
+    "building_name": "830 Park Ave, New York, NY 10021",
+    "main_address": "830 Park Ave, New York, NY 10021",
+    "service_entrance": "56 E 76th St, New York, NY 10021",
     "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
-    "delivery_access":" Mon - Fri : 9am - 4:30pm ",
+    "delivery_access":" Mon - Sat : 8:30am - 4:30pm ",
     "estimated_time_saved": 1,
     "last_verified":"2026-10",
     "images": [
-     "Images/935_park_ave.jpg"
+     "Images/830_park_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 118,
+    "building_name": "1185 Park Ave, New York, NY 10128",
+    "main_address": "1185 Park Ave, New York, NY 10128",
+    "service_entrance": "128 E 94th St, New York, NY 10128",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Sat : 7am - 9pm ",
+    "estimated_time_saved": 2,
+    "last_verified":"2026-10",
+    "images": [
+     "Images/1185_park_ave.jpg"
+    ]
+  },
+
+ {
+    "id": 119,
+    "building_name": "250 W 57th St, New York, NY 10107",
+    "main_address": "250 W 57th St, New York, NY 10107",
+    "service_entrance": "956 8th Ave, New York, NY 10019",
+    "avg_delivery_time": "6 - 10 min ",
+    "delivery_access":" Mon - Fri : 6am - 5pm ",
+    "estimated_time_saved": 2,
+    "last_verified":"2026-10",
+    "images": [
+     "Images/250_w_57th_st.jpg"
+    ]
+  },
+
+  {
+    "id": 120,
+    "building_name": "765 Park Ave, New York, NY 10021",
+    "main_address": "765 Park Ave, New York, NY 10021",
+    "service_entrance": "111 E 72nd St, New York, NY 10021",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Fri : 7am - 5pm ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "images": [
+     "Images/765_park_ave.jpg"
     ]
   }
+
+
 
 
 ]

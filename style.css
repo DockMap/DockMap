@@ -319,7 +319,7 @@ input:focus-visible {
 
 .details-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 27px;
   border-top: 1px solid var(--line);
   padding-top: 24px;

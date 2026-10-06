@@ -267,6 +267,17 @@ document.addEventListener("click", event => {
 // ==================================================
 
 function displayResult(building) {
+
+    // La même fiche est déjà affichée : éviter de la recompter.
+  if (
+    currentDisplayedBuilding &&
+    String(currentDisplayedBuilding.id) === String(building.id) &&
+    !resultDiv.classList.contains("hidden")
+  ) {
+    return;
+  } 
+
+
   resultDiv.classList.remove("hidden");
   document.body.classList.add("has-result");
   statusEl.textContent = "";
@@ -357,6 +368,65 @@ function displayResult(building) {
     </div>
 
     <div class="details-grid">
+
+    
+      <aside class="delivery-details">
+
+      ${
+  /^\d{4}-(0[1-9]|1[0-2])$/.test(building.last_verified || "")
+    ? `
+      <p class="verification-date">
+        Last verified: ${
+          new Intl.DateTimeFormat("en-US", {
+            month: "long",
+            year: "numeric",
+            timeZone: "UTC"
+          }).format(new Date(building.last_verified + "-01T00:00:00Z"))
+        }
+      </p>
+    `
+    : ""
+  }
+      
+
+        <div class="detail">
+          <span>Delivery access</span>
+          <strong>
+            ${escapeHTML(building.delivery_access || "Not available")}
+          </strong>
+        </div>
+
+        <div class="detail">
+          <span>Average delivery time</span>
+          <strong>
+            ${escapeHTML(building.avg_delivery_time || "Not available")}
+          </strong>
+        </div>
+
+        ${
+          building.instruction
+            ? `
+              <div class="instruction">
+                <span>Entrance instructions</span>
+                <p>${escapeHTML(building.instruction)}</p>
+              </div>
+            `
+            : ""
+        }
+
+        ${
+          building.notes
+            ? `
+              <div class="detail">
+                <span>Notes</span>
+                <p>${escapeHTML(building.notes)}</p>
+              </div>
+            `
+            : ""
+        }
+      </aside>
+
+      
       <div class="gallery">
         ${
           photos.length
@@ -413,61 +483,6 @@ function displayResult(building) {
         }
       </div>
 
-      <aside class="delivery-details">
-
-      ${
-  /^\d{4}-(0[1-9]|1[0-2])$/.test(building.last_verified || "")
-    ? `
-      <p class="verification-date">
-        Last verified: ${
-          new Intl.DateTimeFormat("en-US", {
-            month: "long",
-            year: "numeric",
-            timeZone: "UTC"
-          }).format(new Date(building.last_verified + "-01T00:00:00Z"))
-        }
-      </p>
-    `
-    : ""
-  }
-      
-
-        <div class="detail">
-          <span>Delivery access</span>
-          <strong>
-            ${escapeHTML(building.delivery_access || "Not available")}
-          </strong>
-        </div>
-
-        <div class="detail">
-          <span>Average delivery time</span>
-          <strong>
-            ${escapeHTML(building.avg_delivery_time || "Not available")}
-          </strong>
-        </div>
-
-        ${
-          building.instruction
-            ? `
-              <div class="instruction">
-                <span>Entrance instructions</span>
-                <p>${escapeHTML(building.instruction)}</p>
-              </div>
-            `
-            : ""
-        }
-
-        ${
-          building.notes
-            ? `
-              <div class="detail">
-                <span>Notes</span>
-                <p>${escapeHTML(building.notes)}</p>
-              </div>
-            `
-            : ""
-        }
-      </aside>
     </div>
   `;
 

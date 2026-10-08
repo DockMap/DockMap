@@ -1204,20 +1204,8 @@
     ]
   },
 
-  {
-    "id": 93,
-    "building_name": "101 Central Park West, New York, NY 10023",
-    "main_address": "101 Central Park West, New York, NY 10023",
-    "service_entrance": "7 W 70th St, New York, NY 10023",
-    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
-    "delivery_access":" Mon - Sat : 8am - 4:30pm",
-    "estimated_time_saved": 2,
-   "images": [
-      "Images/101_cpw.jpg"
-    ]
-  },
 
-   {
+  {
     "id": 94,
     "building_name": "320 Central Park West, New York, NY 10025",
     "main_address": "320 Central Park West, New York, NY 10025",
@@ -1396,8 +1384,8 @@
 
   {
     "id": 107,
-    "building_name": "15 W 81sd St, New York, NY 10024",
-    "main_address": "15 W 81nd St, New York, NY 10024",
+    "building_name": "15 W 81st St, New York, NY 10024",
+    "main_address": "15 W 81st St, New York, NY 10024",
     "service_entrance": "18 - 22 W 82nd St, New York, NY 10024",
     "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
     "delivery_access":" Mon - Sat : 8am - 8pm ",
@@ -1639,6 +1627,19 @@
     "last_verified":"2026-10",
     "images": [
      "Images/239_cpw.jpg"
+    ]
+  },
+
+  {
+    "id": 124,
+    "building_name": "101 Central Park West, New York, NY 10023",
+    "main_address": "101 Central Park West, New York, NY 10023",
+    "service_entrance": "7 W 70th St, New York, NY 10023",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - Sat : 8am - 4:30pm",
+    "estimated_time_saved": 2,
+   "images": [
+      "Images/101_cpw.jpg"
     ]
   }
 

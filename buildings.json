@@ -1621,7 +1621,8 @@
     "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)",
     "delivery_access":" Mon - Fri : 7am - 6:30pm ",
     "estimated_time_saved": 1,
-    "last_verified":"2026-10 by Sankara ",
+    "last_verified":"2026-10 ",
+    "verified_by": "Sankara",
     "images": [
      "Images/480_park_ave.jpg"
     ]

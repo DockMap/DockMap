@@ -833,19 +833,24 @@ dialog::backdrop {
    ================================================== */
 
 .footer-time-saved {
-  margin-top: 12px;
+  position: fixed;
+  right: 18px;
+  bottom: 12px;
+
+  margin: 0;
 
   font-size: 12px;
   font-weight: 500;
-
   color: #6f7c75;
+
+  z-index: 10;
 }
 
 
 /* Téléphone */
 @media (max-width: 600px) {
   .add-building-header-btn {
-    padding: 10px 12px;
-    font-size: 13px;
+    padding: 8px 10px;
+    font-size: 12px;
   }
 }

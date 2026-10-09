@@ -161,6 +161,147 @@
     </footer>
   </main>
 
+  <!-- Add a building -->
+<div
+  id="addBuildingOverlay"
+  class="add-building-overlay"
+  hidden
+>
+  <section
+    class="add-building-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="addBuildingTitle"
+  >
+    <button
+      id="closeAddBuilding"
+      class="add-building-close"
+      type="button"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    <div id="addBuildingFormView">
+      <h2 id="addBuildingTitle">Add a building</h2>
+
+      <p class="add-building-intro">
+        Help other drivers. Takes less than a minute.
+      </p>
+
+      <form id="addBuildingForm">
+
+        <!-- Building address -->
+        <div class="add-building-field">
+          <label for="submittedBuildingAddress">
+            Building address <span aria-hidden="true">*</span>
+          </label>
+
+          <input
+            id="submittedBuildingAddress"
+            name="buildingAddress"
+            type="text"
+            placeholder="e.g. 350 5th Ave"
+            autocomplete="street-address"
+            required
+          />
+        </div>
+
+        <!-- Service entrance photo -->
+        <div class="add-building-field">
+          <label>
+            Service entrance photo <span aria-hidden="true">*</span>
+          </label>
+
+          <label
+            class="add-building-photo-button"
+            for="submittedEntrancePhoto"
+          >
+            <span class="add-building-camera" aria-hidden="true">📷</span>
+
+            <strong>Add photo</strong>
+
+            <small>
+              Take a photo or choose one from your phone
+            </small>
+          </label>
+
+          <input
+            id="submittedEntrancePhoto"
+            name="entrancePhoto"
+            type="file"
+            accept="image/*"
+            required
+            hidden
+          />
+
+          <img
+            id="submittedPhotoPreview"
+            class="add-building-photo-preview"
+            alt="Selected service entrance"
+            hidden
+          />
+        </div>
+
+        <!-- Delivery hours -->
+        <div class="add-building-field">
+          <label for="submittedDeliveryHours">
+            Delivery hours
+            <span class="add-building-optional">(optional)</span>
+          </label>
+
+          <input
+            id="submittedDeliveryHours"
+            name="deliveryHours"
+            type="text"
+            placeholder="e.g. Mon–Fri, 7 AM–6 PM"
+          />
+        </div>
+
+        <button
+          class="add-building-submit"
+          type="submit"
+        >
+          Submit building
+        </button>
+
+        <p class="add-building-review-note">
+          Your submission will be reviewed before it appears on DockMap.
+        </p>
+      </form>
+    </div>
+
+    <!-- Success message -->
+    <div
+      id="addBuildingSuccess"
+      class="add-building-success"
+      hidden
+    >
+      <div class="add-building-success-icon" aria-hidden="true">
+        ✓
+      </div>
+
+      <h2>Thank you!</h2>
+
+      <p>
+        Your building was submitted.<br />
+        DockMap will review it before publishing.
+      </p>
+
+      <button
+        id="finishAddBuilding"
+        class="add-building-submit"
+        type="button"
+      >
+        Done
+      </button>
+    </div>
+  </section>
+</div>
+
+
+  
+
   <!-- Affichage des photos en grand -->
   <dialog id="photoDialog" aria-label="Entrance photos">
     <button

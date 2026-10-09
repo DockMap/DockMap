@@ -1118,3 +1118,127 @@ window.addEventListener("pageshow", refreshDailyCounter);
 
   refreshInstallButtons();
 })();
+
+
+
+/* ==================================================
+   Add a building
+   ================================================== */
+
+const openAddBuildingBtn = document.getElementById("openAddBuilding");
+const addBuildingOverlay = document.getElementById("addBuildingOverlay");
+const closeAddBuildingBtn = document.getElementById("closeAddBuilding");
+
+const addBuildingForm = document.getElementById("addBuildingForm");
+const addBuildingFormView = document.getElementById("addBuildingFormView");
+
+const submittedEntrancePhoto = document.getElementById(
+  "submittedEntrancePhoto"
+);
+
+const submittedPhotoPreview = document.getElementById(
+  "submittedPhotoPreview"
+);
+
+const addBuildingSuccess = document.getElementById(
+  "addBuildingSuccess"
+);
+
+const finishAddBuildingBtn = document.getElementById(
+  "finishAddBuilding"
+);
+
+
+/* Ouvrir la fenêtre */
+
+function openAddBuilding() {
+  addBuildingOverlay.hidden = false;
+  document.body.style.overflow = "hidden";
+}
+
+
+/* Fermer la fenêtre */
+
+function closeAddBuilding() {
+  addBuildingOverlay.hidden = true;
+  document.body.style.overflow = "";
+}
+
+
+/* Clic sur + Add a building */
+
+openAddBuildingBtn?.addEventListener("click", () => {
+  openAddBuilding();
+});
+
+
+/* Clic sur X */
+
+closeAddBuildingBtn?.addEventListener("click", () => {
+  closeAddBuilding();
+});
+
+
+/* Clic sur le fond sombre */
+
+addBuildingOverlay?.addEventListener("click", (event) => {
+  if (event.target === addBuildingOverlay) {
+    closeAddBuilding();
+  }
+});
+
+
+/* Touche Escape sur ordinateur */
+
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Escape" &&
+    addBuildingOverlay &&
+    !addBuildingOverlay.hidden
+  ) {
+    closeAddBuilding();
+  }
+});
+
+
+/* Prévisualisation de la photo */
+
+submittedEntrancePhoto?.addEventListener("change", () => {
+  const photo = submittedEntrancePhoto.files?.[0];
+
+  if (!photo) {
+    submittedPhotoPreview.hidden = true;
+    submittedPhotoPreview.removeAttribute("src");
+    return;
+  }
+
+  const photoUrl = URL.createObjectURL(photo);
+
+  submittedPhotoPreview.src = photoUrl;
+  submittedPhotoPreview.hidden = false;
+});
+
+
+/* Submit — TEST seulement pour le moment */
+
+addBuildingForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  addBuildingFormView.hidden = true;
+  addBuildingSuccess.hidden = false;
+});
+
+
+/* Done */
+
+finishAddBuildingBtn?.addEventListener("click", () => {
+  closeAddBuilding();
+
+  addBuildingForm.reset();
+
+  submittedPhotoPreview.hidden = true;
+  submittedPhotoPreview.removeAttribute("src");
+
+  addBuildingSuccess.hidden = true;
+  addBuildingFormView.hidden = false;
+});

@@ -1343,10 +1343,18 @@ addBuildingForm?.addEventListener("submit", async (event) => {
 
     const submissionId = submissionData.id;
 
+    const addressSlug = submittedBuildingAddress.value
+  .trim()
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-|-$/g, "");
+
+ const submissionFolder = `${submissionId}-${addressSlug}`;
+
     // 2. Upload des photos et liaison avec la soumission
     for (const photo of selectedBuildingPhotos) {
-      const fileName =
-        `${Date.now()}-${crypto.randomUUID()}-${photo.file.name}`;
+     const fileName =
+  `${submissionFolder}/${Date.now()}-${crypto.randomUUID()}-${photo.file.name}`;
 
       const { error: uploadError } = await dockmapSupabase.storage
         .from("building-submission-photos")

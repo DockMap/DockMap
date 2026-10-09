@@ -1,3 +1,11 @@
+const SUPABASE_URL = "https://rfeojoxjdxxjuqplrzwq.supabase.co";
+const SUPABASE_KEY = "sb_publishable_CnmluyGaHpX8BSITOReAwg_4qCJ9zUU";
+
+const dockmapSupabase = supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
 // ==================================================
 // Données et éléments de la page
 // ==================================================
@@ -1132,6 +1140,9 @@ const closeAddBuildingBtn = document.getElementById("closeAddBuilding");
 const addBuildingForm = document.getElementById("addBuildingForm");
 const addBuildingFormView = document.getElementById("addBuildingFormView");
 
+const submittedBuildingAddress = document.getElementById("submittedBuildingAddress");
+const submittedDeliveryHours = document.getElementById("submittedDeliveryHours");
+
 const submittedEntrancePhotos = document.getElementById(
   "submittedEntrancePhotos"
 );
@@ -1305,7 +1316,7 @@ submittedEntrancePhotos?.addEventListener("change", () => {
 
 /* Submit — TEST seulement pour le moment */
 
-addBuildingForm?.addEventListener("submit", (event) => {
+addBuildingForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   // Au moins une photo est obligatoire
@@ -1314,8 +1325,42 @@ addBuildingForm?.addEventListener("submit", (event) => {
     return;
   }
 
-  addBuildingFormView.hidden = true;
-  addBuildingSuccess.hidden = false;
+  try {
+    // 1. Upload des photos dans Supabase Storage
+    for (const photo of selectedBuildingPhotos) {
+      const fileName =
+        `${Date.now()}-${crypto.randomUUID()}-${photo.file.name}`;
+
+      const { error: uploadError } = await dockmapSupabase.storage
+        .from("building-submission-photos")
+        .upload(fileName, photo.file);
+
+      if (uploadError) {
+        throw uploadError;
+      }
+    }
+
+    // 2. Enregistrer les informations du building
+    const { error: insertError } = await dockmapSupabase
+      .from("building_submissions")
+      .insert({
+        building_address: submittedBuildingAddress.value.trim(),
+        delivery_hours: submittedDeliveryHours.value.trim(),
+        status: "pending"
+      });
+
+    if (insertError) {
+      throw insertError;
+    }
+
+    // 3. Afficher le succès seulement si tout a fonctionné
+    addBuildingFormView.hidden = true;
+    addBuildingSuccess.hidden = false;
+
+  } catch (error) {
+    console.error("DockMap submission error:", error);
+    alert("Something went wrong. Please try again.");
+  }
 });
 
 /* Done */

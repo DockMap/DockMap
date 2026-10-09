@@ -1132,13 +1132,24 @@ const closeAddBuildingBtn = document.getElementById("closeAddBuilding");
 const addBuildingForm = document.getElementById("addBuildingForm");
 const addBuildingFormView = document.getElementById("addBuildingFormView");
 
-const submittedEntrancePhoto = document.getElementById(
-  "submittedEntrancePhoto"
+const submittedEntrancePhotos = document.getElementById(
+  "submittedEntrancePhotos"
 );
 
-const submittedPhotoPreview = document.getElementById(
-  "submittedPhotoPreview"
+const submittedPhotosGrid = document.getElementById(
+  "submittedPhotosGrid"
 );
+
+const addBuildingPhotoButton = document.getElementById(
+  "addBuildingPhotoButton"
+);
+
+const submittedPhotosCount = document.getElementById(
+  "submittedPhotosCount"
+);
+
+let selectedBuildingPhotos = [];
+
 
 const addBuildingSuccess = document.getElementById(
   "addBuildingSuccess"
@@ -1201,21 +1212,94 @@ document.addEventListener("keydown", (event) => {
 });
 
 
-/* Prévisualisation de la photo */
+/* ==================================================
+   Photos — maximum 3
+   ================================================== */
 
-submittedEntrancePhoto?.addEventListener("change", () => {
-  const photo = submittedEntrancePhoto.files?.[0];
+function renderSelectedBuildingPhotos() {
+  // Supprime uniquement les anciennes vignettes
+  submittedPhotosGrid
+    .querySelectorAll(".add-building-photo-preview-item")
+    .forEach((item) => item.remove());
 
-  if (!photo) {
-    submittedPhotoPreview.hidden = true;
-    submittedPhotoPreview.removeAttribute("src");
-    return;
-  }
+  // Crée une vignette pour chaque photo
+  selectedBuildingPhotos.forEach((photo, index) => {
+    const photoItem = document.createElement("div");
+    photoItem.className = "add-building-photo-preview-item";
 
-  const photoUrl = URL.createObjectURL(photo);
+    const image = document.createElement("img");
+    image.src = photo.url;
+    image.alt = `Service entrance photo ${index + 1}`;
 
-  submittedPhotoPreview.src = photoUrl;
-  submittedPhotoPreview.hidden = false;
+    const removeButton = document.createElement("button");
+    removeButton.type = "button";
+    removeButton.className = "add-building-remove-photo";
+    removeButton.setAttribute(
+      "aria-label",
+      `Remove photo ${index + 1}`
+    );
+    removeButton.textContent = "×";
+
+    // Supprimer seulement cette photo
+    removeButton.addEventListener("click", () => {
+      URL.revokeObjectURL(selectedBuildingPhotos[index].url);
+
+      selectedBuildingPhotos.splice(index, 1);
+
+      renderSelectedBuildingPhotos();
+    });
+
+    photoItem.appendChild(image);
+    photoItem.appendChild(removeButton);
+
+    submittedPhotosGrid.insertBefore(
+      photoItem,
+      addBuildingPhotoButton
+    );
+  });
+
+  // Cache + Add photo lorsque 3 photos sont présentes
+  addBuildingPhotoButton.hidden =
+    selectedBuildingPhotos.length >= 3;
+
+  // Met à jour le compteur
+  submittedPhotosCount.textContent =
+    `${selectedBuildingPhotos.length} of 3 photos selected`;
+}
+
+
+/* Quand le livreur choisit des photos */
+
+submittedEntrancePhotos?.addEventListener("change", () => {
+  const newPhotos = Array.from(
+    submittedEntrancePhotos.files || []
+  );
+
+  newPhotos.forEach((photo) => {
+    // Maximum 3
+    if (selectedBuildingPhotos.length >= 3) {
+      return;
+    }
+
+    // Accepte uniquement les images
+    if (!photo.type.startsWith("image/")) {
+      return;
+    }
+
+    selectedBuildingPhotos.push({
+      file: photo,
+      url: URL.createObjectURL(photo)
+    });
+  });
+
+  /*
+    Important :
+    on vide l'input pour permettre de sélectionner
+    à nouveau la même photo après l'avoir supprimée.
+  */
+  submittedEntrancePhotos.value = "";
+
+  renderSelectedBuildingPhotos();
 });
 
 
@@ -1224,21 +1308,36 @@ submittedEntrancePhoto?.addEventListener("change", () => {
 addBuildingForm?.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  // Au moins une photo est obligatoire
+  if (selectedBuildingPhotos.length === 0) {
+    alert("Please add at least one service entrance photo.");
+    return;
+  }
+
   addBuildingFormView.hidden = true;
   addBuildingSuccess.hidden = false;
 });
-
 
 /* Done */
 
 finishAddBuildingBtn?.addEventListener("click", () => {
   closeAddBuilding();
 
+  // Vide les champs du formulaire
   addBuildingForm.reset();
 
-  submittedPhotoPreview.hidden = true;
-  submittedPhotoPreview.removeAttribute("src");
+  // Libère les aperçus des photos
+  selectedBuildingPhotos.forEach((photo) => {
+    URL.revokeObjectURL(photo.url);
+  });
 
+  // Vide la liste des photos
+  selectedBuildingPhotos = [];
+
+  // Remet la zone photo à zéro
+  renderSelectedBuildingPhotos();
+
+  // Prépare le formulaire pour la prochaine contribution
   addBuildingSuccess.hidden = true;
   addBuildingFormView.hidden = false;
 });

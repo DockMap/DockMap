@@ -207,41 +207,52 @@
           />
         </div>
 
-        <!-- Service entrance photo -->
-        <div class="add-building-field">
-          <label>
-            Service entrance photo <span aria-hidden="true">*</span>
-          </label>
+<!-- Service entrance photos -->
+<div class="add-building-field">
+  <label>
+    Service entrance photos <span aria-hidden="true">*</span>
+  </label>
 
-          <label
-            class="add-building-photo-button"
-            for="submittedEntrancePhoto"
-          >
-            <span class="add-building-camera" aria-hidden="true">📷</span>
+  <div
+    id="submittedPhotosGrid"
+    class="add-building-photos-grid"
+  >
+    <!-- Les photos sélectionnées apparaîtront ici -->
 
-            <strong>Add photo</strong>
+    <label
+      id="addBuildingPhotoButton"
+      class="add-building-photo-tile"
+      for="submittedEntrancePhotos"
+    >
+      <span
+        class="add-building-photo-plus"
+        aria-hidden="true"
+      >
+        +
+      </span>
 
-            <small>
-              Take a photo or choose one from your phone
-            </small>
-          </label>
+      <strong>Add photo</strong>
 
-          <input
-            id="submittedEntrancePhoto"
-            name="entrancePhoto"
-            type="file"
-            accept="image/*"
-            required
-            hidden
-          />
+      <small>Up to 3 photos</small>
+    </label>
+  </div>
 
-          <img
-            id="submittedPhotoPreview"
-            class="add-building-photo-preview"
-            alt="Selected service entrance"
-            hidden
-          />
-        </div>
+  <input
+    id="submittedEntrancePhotos"
+    name="entrancePhotos"
+    type="file"
+    accept="image/*"
+    multiple
+    hidden
+  />
+
+  <p
+    id="submittedPhotosCount"
+    class="add-building-photos-count"
+  >
+    0 of 3 photos selected
+  </p>
+ </div>
 
         <!-- Delivery hours -->
         <div class="add-building-field">

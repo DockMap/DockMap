@@ -1326,7 +1326,24 @@ addBuildingForm?.addEventListener("submit", async (event) => {
   }
 
   try {
-    // 1. Upload des photos dans Supabase Storage
+        // 1. Enregistrer d'abord la soumission du building
+    const { data: submissionData, error: insertError } = await dockmapSupabase
+      .from("building_submissions")
+      .insert({
+        building_address: submittedBuildingAddress.value.trim(),
+        delivery_hours: submittedDeliveryHours.value.trim(),
+        status: "pending"
+      })
+      .select("id")
+      .single();
+
+    if (insertError) {
+      throw insertError;
+    }
+
+    const submissionId = submissionData.id;
+
+    // 2. Upload des photos et liaison avec la soumission
     for (const photo of selectedBuildingPhotos) {
       const fileName =
         `${Date.now()}-${crypto.randomUUID()}-${photo.file.name}`;
@@ -1338,25 +1355,23 @@ addBuildingForm?.addEventListener("submit", async (event) => {
       if (uploadError) {
         throw uploadError;
       }
-    }
 
-    // 2. Enregistrer les informations du building
-    const { error: insertError } = await dockmapSupabase
-      .from("building_submissions")
-      .insert({
-        building_address: submittedBuildingAddress.value.trim(),
-        delivery_hours: submittedDeliveryHours.value.trim(),
-        status: "pending"
-      });
+      // Enregistrer le lien entre la photo et la soumission
+      const { error: photoInsertError } = await dockmapSupabase
+        .from("building_submission_photos")
+        .insert({
+          submission_id: submissionId,
+          file_path: fileName
+        });
 
-    if (insertError) {
-      throw insertError;
+      if (photoInsertError) {
+        throw photoInsertError;
+      }
     }
 
     // 3. Afficher le succès seulement si tout a fonctionné
     addBuildingFormView.hidden = true;
     addBuildingSuccess.hidden = false;
-
   } catch (error) {
     console.error("DockMap submission error:", error);
     alert("Something went wrong. Please try again.");

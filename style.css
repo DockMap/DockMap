@@ -792,3 +792,60 @@ dialog::backdrop {
   font-size: 12px;
   line-height: 1.5;
 }
+
+/* ==================================================
+   Add a building — bouton principal du header
+   ================================================== */
+
+.add-building-header-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 11px 16px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #246347;
+  color: #ffffff;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add-building-header-btn:hover {
+  background: #1d523b;
+}
+
+.add-building-header-btn:active {
+  transform: translateY(1px);
+}
+
+
+/* ==================================================
+   Time saved — information secondaire dans le footer
+   ================================================== */
+
+.footer-time-saved {
+  margin-top: 12px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #6f7c75;
+}
+
+
+/* Téléphone */
+@media (max-width: 600px) {
+  .add-building-header-btn {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}

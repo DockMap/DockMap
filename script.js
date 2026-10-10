@@ -204,11 +204,19 @@ function searchBuilding() {
   resultDiv.classList.remove("hidden");
 
   resultDiv.innerHTML = `
-    <div class="empty-state">
-      <h2>Address not found yet</h2>
-      <p>Try a shorter address or choose a suggestion.</p>
-    </div>
-  `;
+  <div class="empty-state">
+    <h2>Address not found yet</h2>
+    <p>This building isn't on DockMap yet.</p>
+
+    <button
+      type="button"
+      id="addMissingBuildingBtn"
+      class="add-missing-building-btn"
+    >
+      + Add this building
+    </button>
+  </div>
+ `;
 }
 
 searchInput.addEventListener("input", showSuggestions);
@@ -1177,6 +1185,25 @@ function openAddBuilding() {
   addBuildingOverlay.hidden = false;
   document.body.style.overflow = "hidden";
 }
+
+/* Ajouter une adresse introuvable */
+
+document.addEventListener("click", (event) => {
+
+  const button = event.target.closest("#addMissingBuildingBtn");
+
+  if (!button) return;
+
+  // Récupérer l'adresse recherchée
+  const missingAddress = searchInput.value.trim();
+
+  // Ouvrir le formulaire
+  openAddBuilding();
+
+  // Remplir automatiquement l'adresse
+  submittedBuildingAddress.value = missingAddress;
+
+});
 
 
 /* Fermer la fenêtre */

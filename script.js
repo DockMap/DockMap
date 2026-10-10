@@ -209,12 +209,12 @@ function searchBuilding() {
     <p>This building isn't on DockMap yet.</p>
 
     <button
-      type="button"
-      id="addMissingBuildingBtn"
-      class="add-missing-building-btn"
-    >
-      + Add this building
-    </button>
+  type="button"
+  id="addMissingBuildingBtn"
+  class="add-building-header-btn"
+  >
+  + Add this building
+</button>
   </div>
  `;
 }

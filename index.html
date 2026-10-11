@@ -189,97 +189,181 @@
         Help other drivers. Takes less than a minute.
       </p>
 
-      <form id="addBuildingForm">
+     <form id="addBuildingForm">
 
-        <!-- Building address -->
-        <div class="add-building-field">
-          <label for="submittedBuildingAddress">
-            Building address <span aria-hidden="true">*</span>
-          </label>
+  <!-- Building address -->
+  <div class="add-building-field">
 
-          <input
-            id="submittedBuildingAddress"
-            name="buildingAddress"
-            type="text"
-            placeholder="e.g. 350 5th Ave"
-            autocomplete="street-address"
-            required
-          />
-        </div>
-
-<!-- Service entrance photos -->
-<div class="add-building-field">
-  <label>
-    Service entrance photos <span aria-hidden="true">*</span>
-  </label>
-
-  <div
-    id="submittedPhotosGrid"
-    class="add-building-photos-grid"
-  >
-    <!-- Les photos sélectionnées apparaîtront ici -->
-
-    <label
-      id="addBuildingPhotoButton"
-      class="add-building-photo-tile"
-      for="submittedEntrancePhotos"
-    >
-      <span
-        class="add-building-photo-plus"
-        aria-hidden="true"
-      >
-        +
-      </span>
-
-      <strong>Add photo</strong>
-
-      <small>Up to 3 photos</small>
+    <label for="submittedBuildingAddress">
+      <span aria-hidden="true">📍</span>
+      Building address <span aria-hidden="true">*</span>
     </label>
+
+    <input
+      id="submittedBuildingAddress"
+      name="buildingAddress"
+      type="text"
+      placeholder="e.g. 350 5th Ave"
+      autocomplete="street-address"
+      required
+    />
+
   </div>
 
-  <input
-    id="submittedEntrancePhotos"
-    name="entrancePhotos"
-    type="file"
-    accept="image/*"
-    multiple
-    hidden
-  />
 
-  <p
-    id="submittedPhotosCount"
-    class="add-building-photos-count"
-  >
-    0 of 3 photos selected
-  </p>
- </div>
+  <!-- Delivery hours -->
+  <div class="add-building-field">
 
-        <!-- Delivery hours -->
-        <div class="add-building-field">
-          <label for="submittedDeliveryHours">
-            Delivery hours
-            <span class="add-building-optional">(optional)</span>
-          </label>
+    <label for="submittedDeliveryHours">
+      <span aria-hidden="true">◷</span>
+      Delivery hours
+      <span class="add-building-optional">(optional)</span>
+    </label>
 
-          <input
-            id="submittedDeliveryHours"
-            name="deliveryHours"
-            type="text"
-            placeholder="e.g. Mon–Fri, 7 AM–6 PM"
-          />
-        </div>
+    <input
+      id="submittedDeliveryHours"
+      name="deliveryHours"
+      type="text"
+      placeholder="e.g. Mon–Fri, 7 AM–6 PM"
+    />
 
-        <button
-          class="add-building-submit"
-          type="submit"
+  </div>
+
+
+  <!-- ID required -->
+  <fieldset class="add-building-id-field">
+
+    <legend>
+      <span aria-hidden="true">▣</span>
+      ID required?
+    </legend>
+
+    <div class="add-building-id-options">
+
+      <label class="add-building-id-option">
+        <input
+          type="radio"
+          name="idRequired"
+          value="yes"
+        />
+        <span>Yes</span>
+      </label>
+
+      <label class="add-building-id-option">
+        <input
+          type="radio"
+          name="idRequired"
+          value="no"
+        />
+        <span>No</span>
+      </label>
+
+      <label class="add-building-id-option">
+        <input
+          type="radio"
+          name="idRequired"
+          value="not_sure"
+          checked
+        />
+        <span>Not sure</span>
+      </label>
+
+    </div>
+
+  </fieldset>
+
+
+  <!-- Additional information -->
+  <div class="add-building-field">
+
+    <label for="submittedAdditionalInfo">
+      <span aria-hidden="true">▤</span>
+      Additional information
+      <span class="add-building-optional">(optional)</span>
+    </label>
+
+    <textarea
+      id="submittedAdditionalInfo"
+      name="additionalInfo"
+      rows="2"
+      maxlength="500"
+      placeholder="Entrance location, access instructions, useful tips..."
+    ></textarea>
+
+  </div>
+
+
+  <!-- Service entrance photos -->
+  <div class="add-building-field">
+
+    <label>
+      <span aria-hidden="true">📷</span>
+      Photos
+      <span class="add-building-optional">
+        (at least 1, max 3)
+      </span>
+    </label>
+
+    <div
+      id="submittedPhotosGrid"
+      class="add-building-photos-grid"
+    >
+
+      <!-- Les photos sélectionnées apparaîtront ici -->
+
+      <label
+        id="addBuildingPhotoButton"
+        class="add-building-photo-tile"
+        for="submittedEntrancePhotos"
+      >
+
+        <span
+          class="add-building-photo-plus"
+          aria-hidden="true"
         >
-          Submit building
-        </button>
+          +
+        </span>
 
-        <p class="add-building-review-note">
-          Your submission will be reviewed before it appears on DockMap.
-        </p>
-      </form>
+        <strong>Tap to add photos</strong>
+
+        <small>1 to 3 photos</small>
+
+      </label>
+
+    </div>
+
+    <input
+      id="submittedEntrancePhotos"
+      name="entrancePhotos"
+      type="file"
+      accept="image/*"
+      multiple
+      hidden
+    />
+
+    <p
+      id="submittedPhotosCount"
+      class="add-building-photos-count"
+    >
+      0 of 3 photos selected
+    </p>
+
+  </div>
+
+
+  <!-- Submit -->
+  <button
+    class="add-building-submit"
+    type="submit"
+  >
+    Submit building
+  </button>
+
+  <p class="add-building-review-note">
+    Your submission will be reviewed before it appears on DockMap.
+  </p>
+
+</form>
     </div>
 
     <!-- Success message -->

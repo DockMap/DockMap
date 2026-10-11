@@ -1355,14 +1355,24 @@ addBuildingForm?.addEventListener("submit", async (event) => {
   try {
         // 1. Enregistrer d'abord la soumission du building
     const { data: submissionData, error: insertError } = await dockmapSupabase
-      .from("building_submissions")
-      .insert({
-        building_address: submittedBuildingAddress.value.trim(),
-        delivery_hours: submittedDeliveryHours.value.trim(),
-        status: "pending"
-      })
-      .select("id")
-      .single();
+  .from("building_submissions")
+  .insert({
+    building_address: submittedBuildingAddress.value.trim(),
+
+    delivery_hours: submittedDeliveryHours.value.trim(),
+
+    id_required: document.querySelector(
+      'input[name="idRequired"]:checked'
+    )?.value || "not_sure",
+
+    additional_information: document.getElementById(
+      "submittedAdditionalInfo"
+    ).value.trim(),
+
+    status: "pending"
+  })
+  .select("id")
+  .single();
 
     if (insertError) {
       throw insertError;

@@ -1124,3 +1124,13 @@ dialog::backdrop {
   .add-building-photo-preview-item { height: 65px; }
   .add-building-id-option { gap: 4px; font-size: 11px; }
 }
+
+/* Icônes uniformes du formulaire */
+.form-icon {
+  display: inline-block;
+  color: #246347;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 5px;
+  vertical-align: middle;
+}

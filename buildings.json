@@ -1835,7 +1835,7 @@
     ]
   },
 
-    {
+  {
     "id": 137,
     "building_name": "1045 6th Ave, New York, NY 10018",
     "main_address": "1045 6th Ave, New York, NY 10018",
@@ -1846,9 +1846,59 @@
     "id_required" : true,
     "last_verified":"2026-10",
     "images": [
-      "Images/100_park_ave.jpg"
+      "Images/1045_6th_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 138,
+    "building_name": "520 Madison Ave, New York, NY 10022",
+    "main_address": "520 Madison Ave, New York, NY 10022",
+    "service_entrance": "8 E 54th St, New York, NY 10022",
+    "avg_delivery_time": " 4-6 min ",
+    "delivery_access":" Mon - Fri : 8am - 6pm ",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/520_madison_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 139,
+    "building_name": "550 Madison Ave, New York, NY 10022",
+    "main_address": "550 Madison Ave, New York, NY 10022",
+    "service_entrance": "21 E 55th St, New York, NY 10022",
+    "avg_delivery_time": " 4-6 min ",
+    "delivery_access":" Mon - Fri : 8am - 6pm ",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/550_madison_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 140,
+    "building_name": "550 Madison Ave, New York, NY 10022",
+    "main_address": "550 Madison Ave, New York, NY 10022",
+    "service_entrance": "21 E 55th St, New York, NY 10022",
+    "avg_delivery_time": " 4-6 min ",
+    "delivery_access":" Mon - Fri : 8am - 6pm ",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/550_madison_ave.jpg"
     ]
   }
+
+
+
+
+
 
 
 

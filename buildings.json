@@ -1983,7 +1983,23 @@
     "images": [
       "Images/300_park_ave.png"
     ]
+  },
+
+  {
+    "id": 147,
+    "building_name": "360 Madison Ave, New York, NY 10017",
+    "main_address": "360 Madison Ave, New York, NY 10017",
+    "service_entrance": "15 E 45th St, New York, NY 10170",
+    "avg_delivery_time": " 2-4 min ",
+    "delivery_access":" Mon - Fri : 8am - 6pm ",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/360_madison_ave.png"
+    ]
   }
+
 
 
 

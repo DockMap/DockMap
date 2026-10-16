@@ -1801,7 +1801,7 @@
     "id_required" : true,
     "last_verified":"2026-10",
     "images": [
-      "Images/800_3rd_ave.jpg"
+      "Images/800_3rd_ave.png"
     ]
   }, 
 
@@ -1882,18 +1882,109 @@
 
   {
     "id": 140,
-    "building_name": "550 Madison Ave, New York, NY 10022",
-    "main_address": "550 Madison Ave, New York, NY 10022",
-    "service_entrance": "21 E 55th St, New York, NY 10022",
+    "building_name": "712 5th Ave, New York, NY 10019",
+    "main_address": "712 5th Ave, New York, NY 10019",
+    "service_entrance": "10 W 56th St, New York, NY 10019",
     "avg_delivery_time": " 4-6 min ",
+    "delivery_access":" Mon - Fri : 8am - 4:30pm ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/712_5th_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 141,
+    "building_name": "250 Park Ave, New York, NY 10177",
+    "main_address": "250 Park Ave, New York, NY 10177",
+    "service_entrance": "81 Vanderbilt Ave, New York, NY 10177",
+    "avg_delivery_time": " 2-4 min ",
+    "delivery_access":" Mon - Fri : 8am - 5pm ",
+    "estimated_time_saved": 2,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/250_park_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 142,
+    "building_name": "437 Madison Ave, New York, NY 10022",
+    "main_address": "437 Madison Ave, New York, NY 10022",
+    "service_entrance": "44 E 50th St, New York, NY 10022",
+    "avg_delivery_time": " 2-4 min ",
+    "delivery_access":" Mon - Fri : 8am - 5pm ",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/437_madison_ave.jpg"
+    ]
+  },
+
+  {
+    "id": 143,
+    "building_name": "320 Park Ave, New York, NY 10022",
+    "main_address": "320 Park Ave, New York, NY 10022",
+    "service_entrance": "49 E 50th St, New York, NY 10022",
+    "avg_delivery_time": " 2-4 min ",
     "delivery_access":" Mon - Fri : 8am - 6pm ",
     "estimated_time_saved": 2,
     "id_required" : true,
     "last_verified":"2026-10",
     "images": [
-      "Images/550_madison_ave.jpg"
+      "Images/320_park_ave.png"
+    ]
+  },
+
+  {
+    "id": 144,
+    "building_name": "360 Park Ave South, New York, NY 10010",
+    "main_address": "360 Park Ave South, New York, NY 10010",
+    "service_entrance": "44 E 26th St, New York, NY 10016",
+    "avg_delivery_time": " 2-4 min ",
+    "delivery_access":" Mon - Fri : 8am - 6pm ",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/360_park_ave_s.png"
+    ]
+  },
+
+  
+  {
+    "id": 145,
+    "building_name": "41 Madison Ave, New York, NY 10010",
+    "main_address": "41 Madison Ave, New York, NY 10010",
+    "service_entrance": "30 E 26th St, New York, NY 10010",
+    "avg_delivery_time": " 2-4 min ",
+    "delivery_access":" Mon - Fri : 8am - 5pm ",
+    "estimated_time_saved": 1,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/41_madison_ave.png"
+    ]
+  },
+
+
+  {
+    "id": 146,
+    "building_name": "300 Park Ave, New York, NY 10022",
+    "main_address": "300 Park Ave, New York, NY 10022",
+    "service_entrance": "48 E 50th St, New York, NY 10022",
+    "avg_delivery_time": " 2-4 min ",
+    "delivery_access":" Mon - Fri : 8am - 5pm ",
+    "estimated_time_saved": 1,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/300_park_ave.png"
     ]
   }
+
 
 
 

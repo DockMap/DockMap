@@ -105,6 +105,7 @@
     "avg_delivery_time": " 4 min (Doorman will take the delivery once you come down via the elevator)",
     "delivery_access":" Mon - Fri : 8am-5pm, other days and times use front entrance",
     "estimated_time_saved": 2,
+    "last_verified":"2026-10",
     "images": [
       "Images/111_murray_st.jpeg"
     ]
@@ -218,7 +219,7 @@
     "instruction": "Beside the main entrance(black door)",
     "same_as_main": true,
     "avg_delivery_time": " 2 min(Package is taken by staff at the service entrance)",
-    "delivery_access":" Mon - Sun: 9am - 5pm, others days and times use front entrance",
+    "delivery_access":" Mon - Sun: 9am - 4:45pm, others days and times use front entrance",
     "estimated_time_saved": 1,
    "images": [
       "Images/1148_5th_ave.jpeg"
@@ -1998,20 +1999,142 @@
     "images": [
       "Images/360_madison_ave.png"
     ]
+  },
+
+  {
+    "id": 148,
+    "building_name": "415 E 37th St, New York, NY 10016",
+    "main_address": "415 E 37th St, New York, NY 10016",
+    "service_entrance": "410 E 38th St, New York, NY 10016",
+    "avg_delivery_time": " 1-2 min (Package is taken by staff at the service entrance) ",
+    "delivery_access":" Mon - Sun : 7am - 11pm ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "instruction": "Enter through the garage and use the walkway on the left, alongside the red railing.",
+    "images": [
+      "Images/415_e_37th_st.jpg"
+    ]
+  },
+
+  {
+    "id": 149,
+    "building_name": "10 Liberty St, New York, NY 10005",
+    "main_address": "10 Liberty St, New York, NY 10005",
+    "service_entrance": "35 Cedar St, New York, NY 10005",
+    "avg_delivery_time": " 1-2 min (Package is taken by staff at the service entrance) ",
+    "delivery_access":" 24/7  ",
+    "estimated_time_saved": 2,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/10_liberty_im1.png",
+      "Images/10_liberty_im2.png"
+      
+    ]
+  },
+
+  {
+    "id": 150,
+    "building_name": "1021 Park Ave, New York, NY 10028",
+    "main_address": "1021 Park Ave, New York, NY 10028",
+    "service_entrance": "105 E 85th St, New York, NY 10028",
+    "avg_delivery_time": " 1-2 min (Package is taken by staff at the service entrance) ",
+    "delivery_access":" 24/7  ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/1021_park_ave.png" 
+    ]
+  },
+
+  {
+    "id": 151,
+    "building_name": "370 E 76th St, New York, NY 10021",
+    "main_address": "370 E 76th St, New York, NY 10021",
+    "service_entrance": "341 E 75th St, New York, NY 10021",
+    "avg_delivery_time": " 2-3 min ",
+    "delivery_access":" Everyday : 8am - 11pm",
+    "estimated_time_saved": 2,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/370_e_76th_st.png" 
+    ]
+  },
+
+  {
+    "id": 152,
+    "building_name": "24 State St, New York, NY 10004",
+    "main_address": "24 State St, New York, NY 10004",
+    "service_entrance": "1 Bridge St, New York, NY 10004",
+    "avg_delivery_time": " 2-4 min ",
+    "delivery_access":" Mon - Fri : 8am - 5pm",
+    "estimated_time_saved": 1,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "instruction": " The service entrance is on Bridge street, on left of me main entrance",
+    "images": [
+      "Images/24_state_st_1_battery_park_plaza.png" 
+    ]
+  },
+
+  {
+    "id": 153,
+    "building_name": "1 Battery Park Plaza, New York, NY 10004",
+    "main_address": "1 Battery Park Plaza, New York, NY 10004",
+    "service_entrance": "1 Bridge St, New York, NY 10004",
+    "avg_delivery_time": " 2-4 min ",
+    "delivery_access":" Mon - Fri : 8am - 5pm",
+    "estimated_time_saved": 1,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "instruction": " The service entrance is on Bridge street, on left of me main entrance",
+    "images": [
+      "Images/24_state_st_1_battery_park_plaza.png" 
+    ]
+  },
+
+  {
+    "id": 154,
+    "building_name": "225 W 86th St, New York, NY 10024",
+    "main_address": "225 W 86th St, New York, NY 10024",
+    "service_entrance": "220 W 87th St, New York, NY 10024",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance)  ",
+    "delivery_access":" 24/7 ",
+    "estimated_time_saved": 2,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/225_w_86th_st.png" 
+    ]
+  },
+
+  {
+    "id": 155,
+    "building_name": "237 Park Ave, New York, NY 10017",
+    "main_address": "237 Park Ave, New York, NY 10017",
+    "service_entrance": "111 E 45th St, New York, NY 10017",
+    "avg_delivery_time": "5-7 min ",
+    "delivery_access":" Mon-Fri : 8am - 5pm",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/237_park_ave.png" 
+    ]
+  },
+
+  {
+    "id": 156,
+    "building_name": "230 Park Ave, New York, NY 10017",
+    "main_address": "230 Park Ave, New York, NY 10017",
+    "service_entrance": "111 E 45th St, New York, NY 10017",
+    "avg_delivery_time": "5-7 min ",
+    "delivery_access":" Mon - Fri : 8am - 5pm ",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/230_park_ave.png" 
+    ]
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

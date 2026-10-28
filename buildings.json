@@ -443,7 +443,7 @@
     "building_name": "160 W 62nd St, New York, NY 10023",
     "main_address": "160 W 62nd St, New York, NY 10023",
     "service_entrance": "45 Amsterdam Ave, New York, NY 10023",
-    "avg_delivery_time": "4-5 min",
+    "avg_delivery_time": " 1-2 min (Package is taken by staff at the service entrance)",
     "delivery_access":" 24/7 ",
     "estimated_time_saved": 2,
     "images": [
@@ -650,7 +650,7 @@
     "main_address": "150 E 69th St, New York, NY 10021",
     "service_entrance": "197 E 68th St, New York, NY 10021",
     "avg_delivery_time": "3-5 min",
-    "delivery_access":" Mon-Fri : 8am - 8pm",
+    "delivery_access":" Mon-Sat : 8am - 8pm",
     "estimated_time_saved": 3,
     "images": [
       "Images/150_e_69th_st.jpeg"
@@ -805,9 +805,9 @@
 
   {
     "id": 64,
-    "building_name": "190 E 72th St, New York, NY 10021",
-    "main_address": "190 E 72th St, New York, NY 10021",
-    "service_entrance": "191 E 71th St, New York, NY 10021",
+    "building_name": "190 E 72nd St, New York, NY 10021",
+    "main_address": "190 E 72nd St, New York, NY 10021",
+    "service_entrance": "191 E 71st St, New York, NY 10021",
     "avg_delivery_time":"1-2 min (Package is taken by staff at the service entrance)",
     "delivery_access":"  Mon-Fri : 8am - 6pm  || Sat : 8am - 4pm",
     "estimated_time_saved": 3,
@@ -2134,7 +2134,66 @@
     "images": [
       "Images/230_park_ave.png" 
     ]
+  },
+
+  {
+    "id": 157,
+    "building_name": "390 Park Ave, New York, NY 10022",
+    "main_address": "390 Park Ave, New York, NY 10022",
+    "service_entrance": "62 E 54th St, New York, NY 10022",
+    "avg_delivery_time": "4-6 min ",
+    "delivery_access":" Mon - Fri : 8am - 5pm ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/390_park_ave.png" 
+    ]
+  },
+
+  {
+    "id": 158,
+    "building_name": "730 3rd Ave, New York, NY 10017",
+    "main_address": "730 3rd Ave, New York, NY 10017",
+    "service_entrance": "153 E 45th St, New York, NY 10017",
+    "avg_delivery_time": "3-5 min ",
+    "delivery_access":" Mon - Fri : 8am - 5pm ",
+    "estimated_time_saved": 2,
+    "id_required" : true,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/730_3rd_ave.png" 
+    ]
+  },
+
+  {
+    "id": 159,
+    "building_name": "240 Riverside Blvd, New York, NY 10023",
+    "main_address": "240 Riverside Blvd, New York, NY 10023",
+    "service_entrance": "369 W 71st St, New York, NY 10023",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance) ",
+    "delivery_access":" Mon - Fri : 8am - 5pm ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/240_rvsd_blvd.png" 
+    ]
+  },
+
+  {
+    "id": 160,
+    "building_name": "188 E 64th St, New York, NY 10065",
+    "main_address": "186 E 64th St, New York, NY 10065",
+    "service_entrance": "186 E 64th St, New York, NY 10065",
+    "avg_delivery_time": "1-2 min (Package is taken by staff at the service entrance) ",
+    "delivery_access":" Mon - Fri : 8am to midnight",
+    "instruction": "The service entrance is right next to the main entrance. Head down into the garage to access it.",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-10",
+    "images": [
+      "Images/188_e_64th_st.png" 
+    ]
   }
+
 
 
 

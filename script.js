@@ -1170,6 +1170,55 @@ const submittedPhotosCount = document.getElementById(
 let selectedBuildingPhotos = [];
 
 
+// Nouveaux boutons pour ajouter des photos
+const takePhotoBtn = document.getElementById("takePhotoBtn");
+const choosePhotosBtn = document.getElementById("choosePhotosBtn");
+
+const submittedCameraPhoto = document.getElementById(
+  "submittedCameraPhoto"
+);
+
+// Ouvrir l'appareil photo
+takePhotoBtn?.addEventListener("click", () => {
+  if (selectedBuildingPhotos.length >= 3) {
+    alert("Maximum 3 photos allowed.");
+    return;
+  }
+
+  submittedCameraPhoto.click();
+});
+
+// Ouvrir la galerie
+choosePhotosBtn?.addEventListener("click", () => {
+  if (selectedBuildingPhotos.length >= 3) {
+    alert("Maximum 3 photos allowed.");
+    return;
+  }
+
+  submittedEntrancePhotos.click();
+});
+
+// Ajouter la photo prise avec l'appareil photo
+submittedCameraPhoto?.addEventListener("change", () => {
+  const photo = submittedCameraPhoto.files?.[0];
+
+  if (
+    photo &&
+    photo.type.startsWith("image/") &&
+    selectedBuildingPhotos.length < 3
+  ) {
+    selectedBuildingPhotos.push({
+      file: photo,
+      url: URL.createObjectURL(photo)
+    });
+  }
+
+  submittedCameraPhoto.value = "";
+
+  renderSelectedBuildingPhotos();
+});
+
+
 const addBuildingSuccess = document.getElementById(
   "addBuildingSuccess"
 );
@@ -1296,13 +1345,19 @@ function renderSelectedBuildingPhotos() {
     );
   });
 
-  // Cache + Add photo lorsque 3 photos sont présentes
-  addBuildingPhotoButton.hidden =
-    selectedBuildingPhotos.length >= 3;
+  // Cache l'ancien bouton lorsque 3 photos sont présentes
+addBuildingPhotoButton.hidden =
+  selectedBuildingPhotos.length >= 3;
 
-  // Met à jour le compteur
-  submittedPhotosCount.textContent =
-    `${selectedBuildingPhotos.length} of 3 photos selected`;
+// Désactive les nouveaux boutons lorsque la limite est atteinte
+const maxPhotosReached = selectedBuildingPhotos.length >= 3;
+
+takePhotoBtn.disabled = maxPhotosReached;
+choosePhotosBtn.disabled = maxPhotosReached;
+
+// Met à jour le compteur
+submittedPhotosCount.textContent =
+  `${selectedBuildingPhotos.length} of 3 photos selected`;
 }
 
 

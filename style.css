@@ -1134,3 +1134,50 @@ dialog::backdrop {
   margin-right: 5px;
   vertical-align: middle;
 }
+
+
+/* =====================================
+   DockMap — Photo upload buttons
+   ===================================== */
+
+.add-building-photo-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.add-building-photo-btn {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 8px;
+  border: 1px solid #2563eb;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#takePhotoBtn {
+  background: #2563eb;
+  color: white;
+}
+
+.add-building-photo-btn:hover {
+  opacity: 0.9;
+}
+
+/* Masquer l'ancien bouton */
+#addBuildingPhotoButton {
+  display: none !important;
+}
+
+
+/* Boutons désactivés après 3 photos */
+.add-building-photo-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

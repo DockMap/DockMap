@@ -2304,7 +2304,7 @@
     "service_entrance": "492 E 74th St, New York, NY 10021",
     "avg_delivery_time": " 3-5 min ",
     "delivery_access":" Mon - Sun : 7am - 11pm ",
-    "estimated_time_saved": 3,
+    "estimated_time_saved": 2,
     "last_verified":"2026-11",
     "images": [
       "Images/1385_york_ave.png" 
@@ -2337,7 +2337,83 @@
     "images": [
       "Images/300_mad_ave.png" 
     ]
+  },
+
+  {
+    "id": 171,
+    "building_name": "90 Park Ave, New York, NY 10016",
+    "main_address": "90 Park Ave, New York, NY 10016",
+    "service_entrance": "33 E 39th St, New York, NY 10016",
+    "avg_delivery_time": " 4-6 min",
+    "delivery_access":" Mon - Fri : 7:30am - 6pm ",
+    "estimated_time_saved": 2,
+    "id_required":true,
+    "last_verified":"2026-11",
+    "images": [
+      "Images/90_park_ave.png" 
+    ]
+  },
+
+  {
+    "id": 172,
+    "building_name": "1221 6th Ave, New York, NY 10020",
+    "main_address": "1221 6th Ave, New York, NY 10020",
+    "service_entrance": "137 W 48th St, New York, NY 10036",
+    "avg_delivery_time": " 4-6 min",
+    "delivery_access":" Mon - Fri : 7:30am - 6pm ",
+    "estimated_time_saved": 2,
+    "id_required":true,
+    "last_verified":"2026-11",
+    "images": [
+      "Images/1221_6th_ave.png" 
+    ]
+  },
+
+  {
+    "id": 173,
+    "building_name": "645 5th Ave, New York, NY 10022",
+    "main_address": "645 5th Ave, New York, NY 10022",
+    "service_entrance": "10 E 52nd St, New York, NY 10022",
+    "avg_delivery_time": " 4-6 min",
+    "delivery_access":" Mon - Fri : 8am - 4:45pm ",
+    "estimated_time_saved": 2,
+    "id_required":true,
+    "last_verified":"2026-11",
+    "images": [
+      "Images/645_5th_ave.png" 
+    ]
+  },
+
+  {
+    "id": 174,
+    "building_name": "1965 Broadway, New York, NY 10023",
+    "main_address": "1965 Broadway, New York, NY 10023",
+    "service_entrance": "128 W 67th St, New York, NY 10023",
+    "avg_delivery_time": " 1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" 24/7 ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-11",
+    "images": [
+      "Images/1965_broadway.png" 
+    ]
+  },
+
+  {
+    "id": 175,
+    "building_name": "903 Park Ave, New York, NY 10075",
+    "main_address": "903 Park Ave, New York, NY 10075",
+    "service_entrance": "107 E 79th St, New York, NY 10075",
+    "avg_delivery_time": " 1-2 min (Package is taken by staff at the service entrance)",
+    "delivery_access":" Mon - fri: 7am - 4:30pm  || sat: 7am - 3pm ",
+    "estimated_time_saved": 1,
+    "last_verified":"2026-11",
+    "images": [
+      "Images/903_park_ave.png" 
+    ]
   }
+
+
+
 
 
 
